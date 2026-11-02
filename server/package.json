@@ -1,0 +1,17 @@
+{
+  "name": "juamedia-chat-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Optional server-side proxy so the Ask Jua widget can use live Claude answers without exposing an API key in the browser.",
+  "main": "chat-server.js",
+  "scripts": {
+    "start": "node chat-server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
