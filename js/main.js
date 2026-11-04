@@ -99,13 +99,26 @@
       var menu = panelOf(btn);
       if (!menu) { return; }
 
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
+      function toggle() {
         var open = btn.getAttribute("aria-expanded") === "true";
         closeAll(btn);
         btn.setAttribute("aria-expanded", open ? "false" : "true");
         menu.classList.toggle("open", !open);
-      });
+      }
+
+      btn.addEventListener("click", function (e) { e.preventDefault(); toggle(); });
+
+      // On phones people tap the word, not the little arrow: open the menu.
+      // The menu carries an "All ..." link to the page itself.
+      var label = btn.parentNode.querySelector(":scope > a");
+      if (label) {
+        label.addEventListener("click", function (e) {
+          if (window.innerWidth > 900) { return; }
+          e.preventDefault();
+          e.stopPropagation();
+          toggle();
+        });
+      }
 
       // Tapping a link inside closes the menu.
       menu.addEventListener("click", function (e) {

@@ -230,6 +230,7 @@ a:hover .txt-link::after, .txt-link:hover::after { transform: translateX(3px); }
 .nav > ul > li > a.on { font-weight: 600; }
 .has-mega:hover .caret { transform: rotate(225deg) translateY(-1px); }
 .sub-toggle { display: none; }
+.mega-all { display: none; }
 .nav-cta { flex: 0 0 auto; }
 
 .burger {
@@ -1056,8 +1057,11 @@ body.audit-modal-open { overflow: hidden; }
     display: none; opacity: 1; visibility: visible; transform: none; margin-bottom: 12px;
     -webkit-backdrop-filter: none; backdrop-filter: none;
   }
-  .has-mega:hover > .mega, .has-mega:focus-within > .mega { display: none; }
-  .mega.open { display: block; }
+  /* phones keep :hover and :focus after a tap, so only the open class decides */
+  .nav .has-mega > .mega { display: none; }
+  .nav .has-mega > .mega.open { display: block; }
+  .mega-all { display: flex; align-items: center; justify-content: space-between; padding: 4px 0 12px; margin-bottom: 4px; border-bottom: 1px solid var(--line); font-weight: 600; color: var(--link); }
+  .mega-all::after { content: "\203A"; font-size: 1.3em; line-height: 1; }
   .mega-inner { padding: 14px 18px; gap: 16px; }
   .mega-intro, .mega-feat, .mega-tabs { display: none; }
   .mega-panel, .mega-cats { grid-template-columns: 1fr; }

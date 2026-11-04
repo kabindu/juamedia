@@ -137,6 +137,9 @@
     "Get found on": "Patikana kwenye",
     "Get chosen.": "Chaguliwa.",
 
+    "All insights": "Maarifa yote",
+    "All ten services": "Huduma zote kumi",
+
     /* ---------------- AI touches ---------------- */
     "AI assistant": "Msaidizi wa AI",
     "Ask Jua": "Muulize Jua",
