@@ -134,6 +134,9 @@
 
     "Want to be found on": "Unataka kupatikana kwenye",
 
+    "Get found on": "Patikana kwenye",
+    "Get chosen.": "Chaguliwa.",
+
     /* ---------------- AI touches ---------------- */
     "AI assistant": "Msaidizi wa AI",
     "Ask Jua": "Muulize Jua",

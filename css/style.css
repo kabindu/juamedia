@@ -323,6 +323,10 @@ a:hover .txt-link::after, .txt-link:hover::after { transform: translateX(3px); }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-split p { margin: 0 0 28px; max-width: 32em; }
+/* the platform name in the headline sits on its own line, so changing it never reflows the rest */
+.swap-line { display: block; color: var(--blue); }
+.swap { display: inline-block; transition: opacity .22s ease, transform .22s ease; }
+.swap.out { opacity: 0; transform: translateY(.25em); }
 .hero-split .hero-trust { justify-content: flex-start; }
 
 .capture {

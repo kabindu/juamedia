@@ -578,27 +578,7 @@
   }
 
 
-  /* 6. Hero headline: cycle the platform the visitor cares about */
-  function heroWord() {
-    var el = document.getElementById("heroWord");
-    if (!el) { return; }
-    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { return; }
-
-    var words = ["TikTok", "Instagram", "Google", "YouTube", "ChatGPT", "WhatsApp"];
-    var i = 0;
-
-    setInterval(function () {
-      el.classList.add("out");
-      setTimeout(function () {
-        i = (i + 1) % words.length;
-        el.textContent = words[i];
-        el.classList.remove("out");
-      }, 230);
-    }, 2200);
-  }
-
   ready(function () {
-    heroWord();
     megaTabs();
     loadMore();
     auditBar();
@@ -817,6 +797,7 @@
    Platform switcher
    One clock drives three things, so they always agree:
      - the word in the top bar          (#rotator, every page)
+     - the word in the hero headline    (#heroWord, home page)
      - the photo and result in the hero (#heroShow, home page)
      - the pressed platform button      (.platforms [data-platform])
    Hovering the hero or the buttons pauses it; choosing a platform holds it
@@ -837,10 +818,11 @@
 
   function init() {
     var rot = document.getElementById("rotator");
+    var word = document.getElementById("heroWord");
     var show = document.getElementById("heroShow");
     var slides = show ? show.querySelectorAll(".slide") : [];
     var buttons = document.querySelectorAll(".platforms [data-platform]");
-    if (!rot && !slides.length) { return; }
+    if (!rot && !slides.length && !word) { return; }
 
     var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var i = 0, hovering = false, heldUntil = 0;
@@ -856,6 +838,13 @@
             'stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
             PLATFORMS[i][1] + "</svg><b>" + name + "</b>";
           rot.classList.remove("fade");
+        }, still ? 0 : 220);
+      }
+      if (word) {
+        word.classList.add("out");
+        setTimeout(function () {
+          word.textContent = name;
+          word.classList.remove("out");
         }, still ? 0 : 220);
       }
       Array.prototype.forEach.call(slides, function (s) {
