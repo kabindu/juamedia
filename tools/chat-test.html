@@ -1,0 +1,149 @@
+<!doctype html>
+<!--
+  Ask Jua test suite. Serve the site and open /tools/chat-test.html:
+      python3 -m http.server 8000   ->   http://localhost:8000/tools/chat-test.html
+  Each case is a message and the answer id it should produce (a prefix match,
+  so "svc:" accepts any service). Conversations share memory between turns.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ask Jua tests</title>
+<style>
+  body { font: 14px/1.5 system-ui, sans-serif; margin: 24px; color: #1d1d1f; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  #sum { font-size: 16px; font-weight: 600; margin: 0 0 16px; }
+  table { border-collapse: collapse; width: 100%; }
+  td, th { border-bottom: 1px solid #e5e5ea; padding: 6px 8px; text-align: left; vertical-align: top; }
+  .ok td:first-child { color: #17b26a; } .bad { background: #fdecea; } .bad td:first-child { color: #d92d20; }
+  td.a { color: #6e6e73; max-width: 560px; }
+</style>
+</head>
+<body>
+<h1>Ask Jua — test suite</h1>
+<p id="sum">Running…</p>
+<table><thead><tr><th></th><th>Message</th><th>Expected</th><th>Got</th><th>Answer</th></tr></thead><tbody id="rows"></tbody></table>
+
+<script src="../js/chat-knowledge.js"></script>
+<script src="../js/chat-brain.js"></script>
+<script>
+// [message, expected id prefix] — a nested array is one conversation
+var CASES = [
+  // greetings and small talk
+  ["hi", "greet"], ["Hello!", "greet"], ["hey there", "greet"], ["hiiii", "greet"], ["good morning", "greet"],
+  ["Good evening team", "greet"], ["habari", "greet"], ["mambo", "greet"], ["niaje", "greet"], ["sasa bro", "greet"],
+  ["vipi", "greet"], ["yo", "greet"], ["hujambo", "howareyou"], ["how are you?", "howareyou"], ["hi, how are you", "howareyou"],
+  ["uko aje", "howareyou"], ["thanks", "thanks"], ["thank you so much", "thanks"], ["asante sana", "thanks"],
+  ["bye", "bye"], ["kwaheri", "bye"], ["see you later", "bye"], ["who are you?", "identity"], ["are you a bot", "identity"],
+  ["are you human?", "identity"], ["whats your name", "identity"], ["tell me a joke", "joke"], ["lol", "laugh"],
+  ["you are useless", "rude"], ["my name is Kelvin", "name"], ["", "empty"],
+
+  // services
+  ["what services do you offer", "services"], ["what do you do?", "services"], ["mnafanya nini", "services"],
+  ["tell me about seo", "svc:seo"], ["SEO", "svc:seo"], ["Can you manage my instagram?", "svc:social"],
+  ["tiktok marketing", "svc:social"], ["I need a website", "svc:web"], ["do you build online shops with mpesa", "svc:web"],
+  ["google ads", "svc:google"], ["ppc management", "svc:google"], ["logo design", "svc:brand"], ["product photography", "svc:brand"],
+  ["radio adverts", "svc:offline"], ["billboards", "svc:offline"], ["press coverage", "svc:pr"], ["analytics dashboard", "svc:data"],
+  ["blog writing", "svc:content"], ["how do I show up in chatgpt", "article"], ["AI search optimisation", "svc:ai"],
+
+  // typos
+  ["webiste design", "svc:web"], ["instgram", "svc:social"], ["pricng", "price"], ["how much does seo cots", "price:seo"],
+  ["facebok ads", "svc:social"], ["brandng", "svc:brand"], ["anlytics", "svc:data"],
+
+  // service + question type
+  ["how much is a website", "price:web"], ["what does google ads cost", "price:google"], ["SEO price", "price:seo"],
+  ["how long does seo take", "time:seo"], ["how long to build a website", "time:web"], ["how soon do google ads work", "time:google"],
+  ["what is included in social media management", "included:social"], ["seo process", "process:seo"],
+  ["branding results", "results:brand"], ["show me website examples", "results:web"],
+
+  // general questions
+  ["how much do you charge", "price"], ["bei ni ngapi?", "price"], ["what are your prices", "price"], ["is it expensive", "price"],
+  ["how long until I see results", "faq"], ["how do you work", "process"], ["what is included", "included"],
+  ["show me your results", "results"], ["case studies", "results"], ["where are you located", "location"],
+  ["do you work in mombasa", "faq"], ["are you open now", "hours"], ["what are your working hours", "hours"],
+  ["contact", "contact"], ["can I talk to a human", "contact"], ["whats your phone number", "contact"],
+  ["who is on your team", "team"], ["what industries do you work with", "industries"], ["do you work with startups", "small"],
+  ["do you write in kiswahili", "language"], ["how long is the contract", "contract"], ["can I cancel anytime", "contract"],
+  ["free audit", "audit"], ["do you guarantee page one", "guarantee"], ["are you hiring", "careers"], ["internship", "careers"],
+  ["do you have discounts", "discount"], ["why should I choose you", "faq"], ["who owns the accounts", "ownership"],
+  ["how do I pay you", "payment"], ["I want more customers", "grow"], ["how can I increase sales", "grow"],
+  ["where should I start", "start"], ["free guides", "library"], ["marketing statistics", "library"],
+
+  // definitions
+  ["what is seo", "define:seo"], ["what is GEO", "define:geo"], ["what does ppc mean", "define:ppc"], ["what is a backlink", "define:backlink"],
+  ["what is the map pack", "define:map pack"], ["what is performance max", "define:performance max"],
+
+  // knowledge: FAQs, articles, stats, case studies, guides
+  ["do we have to appear on camera", "faq"], ["is ad budget part of your fee", "adbudget"], ["do you take a percentage of spend", "faq"],
+  ["why not publish prices", "faq"], ["how do I get my business named by chatgpt", "article"],
+  ["what works on tiktok for kenyan brands", "article"], ["tips for google ads", "article"],
+  ["how do I win the map pack", "article"], ["how do I get press coverage", "article"],
+  ["how many people use whatsapp to contact businesses", "stat"], ["tell me about sokoni hardware", "case"],
+  ["afya bora clinics", "case"], ["weekly content plan guide", "guide"],
+
+  // industries
+  ["I run a clinic", "industry"], ["I own a hotel in Naivasha", "industry"], ["we sell cars", "industry"],
+  ["I have a school", "industry"], ["we are a sacco", "industry"], ["I run a hardware shop", "industry"],
+  ["how much is a website for my school", "price:web"],
+
+  // details worth acting on
+  ["mybusiness.co.ke", "site"], ["can you check www.example.com", "site"], ["my email is jane@shop.co.ke", "lead"],
+  ["call me on 0712345678", "lead"],
+
+  // off topic
+  ["what's the weather like", "offtopic"], ["who will win the premier league", "offtopic"], ["help me with my python code", "offtopic"],
+  ["asdfgh qwerty", "fallback"],
+
+  // blind-test misses, kept as regressions
+  ["heyy whats good", "greet"], ["Sasa, mko aje?", "howareyou"], ["cool thanks", "thanks"], ["nice", "ack"], ["hmm", "hmm"],
+  ["are you guys legit", "trust"], ["is this a scam", "trust"], ["what if I'm not happy", "contract"], ["who is alfred kimani", "team"],
+  ["I need someone to design my logo and business cards", "svc:brand"], ["whats the minimum budget for google ads", "adbudget"],
+  ["do you do whatsapp marketing", "svc:social"], ["what's the difference between seo and google ads", "compare"],
+  ["seo or google ads, which is better?", "compare"], ["how do you measure results", "svc:data"],
+
+  // second blind batch, kept as regressions
+  ["Niaje bro, mnaweza nisaidia na TikTok?", "svc:social"], ["Habari za asubuhi", "greet"], ["nataka wateja wengi zaidi", "grow"],
+  ["mnapatikana wapi", "location"], ["mnafungua saa ngapi", "hours"], ["asante kwa msaada", "thanks"],
+  ["Hello I am a dentist in Westlands and I want more patients through google", "industry"],
+  ["we just opened a bakery in Ruaka what should we do first", "start"], ["my competitors rank above me on google why", "article"],
+  ["how much should I spend on facebook ads per month", "adbudget"], ["can you handle everything for me", "fullservice"],
+  ["i want a full marketing team", "fullservice"], ["is it possible to get results in one week", "time"], ["do you build apps", "apps"],
+  ["can you make me a mobile app", "apps"], ["do you sell followers", "fake"], ["can you buy me likes", "fake"],
+  ["what is a landing page", "define:landing page"], ["do you work with NGOs", "ngo"], ["what happens after the audit", "process"],
+  ["can I pay monthly", "payment"], ["what results did Rafiki Motors get", "case"], ["which is better tiktok or instagram", "platforms"],
+  ["tell me something interesting", "stat"], ["what's 2+2", "math"], ["you're amazing", "ack"], ["I'm confused", "help"],
+  ["help", "help"], ["start", "help"], ["contact sales", "contact"], ["whats your whatsapp", "contact"], ["site: jengo.co.ke", "site"],
+  ["Is my data safe with you?", "privacy"],
+
+  // conversations
+  [["tell me about seo", "svc:seo"], ["how much is it?", "price:seo"], ["and how long?", "time:seo"], ["tell me more", "more:seo"]],
+  [["websites", "svc:web"], ["how long does that take", "time:web"], ["thanks", "thanks"]],
+  [["I run a clinic", "industry"], ["yes", "audit"]],
+  [["social media", "svc:social"], ["yes", "more:social"]],
+  [["hi", "greet"], ["what does it cost", "price"], ["no", "no"]],
+  [["hello, how much is google ads?", "price:google"]],
+  [["habari, mnafanya nini?", "services"]],
+  [["my name is Achieng", "name"], ["thanks", "thanks"]]
+];
+
+var rows = document.getElementById("rows"), pass = 0, total = 0;
+function run(msg, want, st) {
+  var out = JuaBrain.reply(msg, st);
+  var ok = out.id === want || out.id.indexOf(want + ":") === 0 || (want.slice(-1) === ":" && out.id.indexOf(want) === 0);
+  total++; if (ok) { pass++; }
+  var tr = document.createElement("tr");
+  tr.className = ok ? "ok" : "bad";
+  [ok ? "✓" : "✗", msg || "(empty)", want, out.id, out.text.slice(0, 220)].forEach(function (v, i) {
+    var td = document.createElement("td"); td.textContent = v; if (i === 4) { td.className = "a"; } tr.appendChild(td);
+  });
+  rows.appendChild(tr);
+}
+CASES.forEach(function (c) {
+  if (Array.isArray(c[0])) { var st = {}; c.forEach(function (t) { run(t[0], t[1], st); }); }
+  else { run(c[0], c[1], {}); }
+});
+document.getElementById("sum").textContent = pass + " / " + total + " passed (" + Math.round(pass / total * 100) + "%)";
+document.title = "Ask Jua tests: " + pass + "/" + total;
+</script>
+</body>
+</html>

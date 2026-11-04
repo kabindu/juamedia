@@ -73,3 +73,17 @@ Kiswahili). Edit `SYSTEM` in `chat-server.js` to change any of that.
 2. Host this behind HTTPS on your own domain and point `JUA_CHAT_API` at it.
 3. Add rate limiting per IP — a public chat endpoint is a public spend endpoint.
 4. Keep an eye on usage in the Anthropic Console for the first week.
+
+## Knowledge
+
+`server/knowledge.json` (and `js/chat-knowledge.js` for the browser) is generated from
+the site's own pages — service facts, FAQ answers, articles, case studies, marketing
+numbers and guides. Both the offline assistant and this proxy answer from it.
+Re-run after changing page content:
+
+```bash
+python3 tools/build-knowledge.py
+```
+
+The offline assistant's test suite lives at `tools/chat-test.html`. Serve the site and
+open it in a browser; it reports how many of its 200+ questions get the right answer.
