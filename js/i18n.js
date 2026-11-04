@@ -132,6 +132,8 @@
     "News & Trends": "Habari na Mienendo",
     "All insights": "Maarifa yote",
 
+    "Want to be found on": "Unataka kupatikana kwenye",
+
     /* ---------------- AI touches ---------------- */
     "AI assistant": "Msaidizi wa AI",
     "Ask Jua": "Muulize Jua",

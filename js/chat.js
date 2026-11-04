@@ -409,6 +409,7 @@
   function open() {
     panel.classList.add("open");
     launcher.setAttribute("aria-expanded", "true");
+    document.documentElement.classList.add("chat-open");   // phones: sheet takes the screen
     if (!log.childNodes.length) {
       addMsg("bot", GREET[lang()]);
       addChips(START_CHIPS);
@@ -419,6 +420,7 @@
   function close() {
     panel.classList.remove("open");
     launcher.setAttribute("aria-expanded", "false");
+    document.documentElement.classList.remove("chat-open");
   }
 
   function build() {

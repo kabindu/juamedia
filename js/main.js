@@ -43,14 +43,22 @@
     var nav = $("#headerMain") || $(".nav");
     if (!burger || !nav) { return; }
 
+    var header = $(".site-header");
+
     function close() {
       nav.classList.remove("open");
       burger.setAttribute("aria-expanded", "false");
+      document.documentElement.classList.remove("nav-open");
     }
 
     burger.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
       burger.setAttribute("aria-expanded", open ? "true" : "false");
+      // the sheet starts wherever the header ends (the top bar may be in view)
+      if (open && header) {
+        document.documentElement.style.setProperty("--nav-top", header.getBoundingClientRect().bottom + "px");
+      }
+      document.documentElement.classList.toggle("nav-open", open);
     });
 
     // Close after tapping a link, or on Escape, or when resized to desktop.
@@ -109,7 +117,7 @@
     });
 
     document.addEventListener("click", function (e) {
-      if (!e.target.closest(".has-sub")) { closeAll(null); }
+      if (!e.target.closest(".has-sub, .has-mega")) { closeAll(null); }
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") { closeAll(null); }
@@ -474,21 +482,6 @@
   }
 
   /* 3. Mobile: the invisible overlay button opens each mega panel */
-  function megaToggles() {
-    $$(".has-mega .sub-toggle").forEach(function (btn) {
-      var mega = btn.parentNode.querySelector(".mega");
-      if (!mega) { return; }
-      btn.addEventListener("click", function (e) {
-        if (window.innerWidth > 900) { return; }   // desktop opens on hover
-        e.preventDefault();
-        var open = mega.classList.contains("open");
-        $$(".mega").forEach(function (m) { m.classList.remove("open"); });
-        mega.classList.toggle("open", !open);
-        btn.setAttribute("aria-expanded", open ? "false" : "true");
-      });
-    });
-  }
-
   /* 4. Load more posts, three at a time */
   function loadMore() {
     var btn = document.getElementById("loadMore");
@@ -531,8 +524,11 @@
     var bar = document.getElementById("auditBar");
     if (!bar) { return; }
 
+    // Once closed it stays closed: remembered in this browser across refreshes
+    // and later visits, not just for the current tab.
+    var KEY = "jm.audit.closed";
     var closed = false;
-    try { closed = sessionStorage.getItem("jm.audit") === "closed"; } catch (e) {}
+    try { closed = localStorage.getItem(KEY) === "1" || sessionStorage.getItem("jm.audit") === "closed"; } catch (e) {}
     if (closed) { bar.parentNode.removeChild(bar); return; }
 
     var lift = function () {
@@ -542,8 +538,10 @@
     };
 
     var atFooter = false;
+    var dismissed = false;
 
     var onScroll = function () {
+      if (dismissed) { return; }
       var up = window.pageYOffset > 600 && !atFooter;
       bar.classList.toggle("show", up);
       // the chat launcher sits bottom-right too, so tell it to lift
@@ -568,9 +566,13 @@
     var close = document.getElementById("auditClose");
     if (close) {
       close.addEventListener("click", function () {
+        // stop watching first, or the next scroll would bring it back
+        dismissed = true;
+        window.removeEventListener("scroll", onScroll);
         bar.classList.remove("show");
         document.body.classList.remove("audit-up");
-        try { sessionStorage.setItem("jm.audit", "closed"); } catch (e) {}
+        try { localStorage.setItem(KEY, "1"); } catch (e) {}
+        setTimeout(function () { if (bar.parentNode) { bar.parentNode.removeChild(bar); } }, 450);
       });
     }
   }
@@ -598,7 +600,6 @@
   ready(function () {
     heroWord();
     megaTabs();
-    megaToggles();
     loadMore();
     auditBar();
   });
