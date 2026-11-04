@@ -132,6 +132,20 @@
     "News & Trends": "Habari na Mienendo",
     "All insights": "Maarifa yote",
 
+    /* ---------------- AI touches ---------------- */
+    "AI assistant": "Msaidizi wa AI",
+    "Ask Jua": "Muulize Jua",
+    "Ask Jua about this": "Muulize Jua kuhusu hili",
+    "Ask Jua anything about growing your business": "Muulize Jua chochote kuhusu kukuza biashara yako",
+    "Our AI assistant answers questions about our services, pricing, timelines and process — instantly, day or night. A strategist follows up within one working day.":
+      "Msaidizi wetu wa AI hujibu maswali kuhusu huduma zetu, bei, muda na mchakato — papo hapo, mchana au usiku. Mtaalamu atafuatilia ndani ya siku moja ya kazi.",
+    "Short on time? Ask our AI assistant instead of reading.": "Huna muda? Muulize msaidizi wetu wa AI badala ya kusoma.",
+    "AI runs through all ten": "AI iko ndani ya huduma zote kumi",
+    "Buyers now ask assistants before they ask a search engine. Every service we run is built to be found, quoted and recommended by AI — and measured when it is.":
+      "Wanunuzi sasa huuliza wasaidizi wa AI kabla ya injini za utafutaji. Kila huduma tunayoendesha imejengwa ipatikane, inukuliwe na kupendekezwa na AI — na hupimwa inapotokea.",
+    "Not sure which service you need? Ask.": "Huna uhakika unahitaji huduma gani? Uliza.",
+    "Ask about services, pricing or timelines": "Uliza kuhusu huduma, bei au muda",
+
     /* ---------------- home hero ---------------- */
     "Nairobi · Serving all of East Africa": "Nairobi · Tunahudumia Afrika Mashariki yote",
     "Want your business seen on": "Unataka biashara yako ionekane kwenye",
@@ -354,6 +368,15 @@
     "Data &amp; analytics": "Takwimu na uchanganuzi",
     "Data & analytics": "Takwimu na uchanganuzi",
     "Local marketing": "Masoko ya eneo",
+
+    /* ---------------- home hero ---------------- */
+    "Get found. Get chosen.": "Patikana. Chaguliwa.",
+    "See the receipts.": "Ona ushahidi.",
+    "We put East African businesses in front of the people already looking for them — and show you the receipts every month.":
+      "Tunaweka biashara za Afrika Mashariki mbele ya watu ambao tayari wanazitafuta — na tunakuonyesha ushahidi kila mwezi.",
+    "AI assistant mentions in six quarters": "kutajwa na wasaidizi wa AI katika robo sita",
+    "Your website or @handle": "Tovuti yako au @jina",
+    "Your website or social handle": "Tovuti yako au jina la mtandao wa kijamii",
 
     /* ---------------- placeholders ---------------- */
     "yourbusiness.co.ke or @yourbusiness": "biasharayako.co.ke au @biasharayako",

@@ -74,9 +74,9 @@ launch with tracking working first, 4) run and report monthly. Most clients live
 Timelines: paid campaigns bring enquiries in week one; SEO moves from month two and is
 meaningful by month four to six; a business website takes three to four weeks.
 
-Free resources on the site: Marketing numbers (stats.html) - 36 figures across social
+Free resources on the site: Marketing numbers (blog.html#numbers) - 36 figures across social
 media, search and AI, ad spend, websites, WhatsApp and ecommerce. Guides and playbooks
-(guides.html) - nine step-by-step documents, free, no form and no download.
+(blog.html#guides) - nine step-by-step documents, free, no form and no download.
 
 Contact: +254 719 547 736 (calls and WhatsApp), juamedia037@gmail.com.
 Hours Monday to Friday, 8:00-18:00 EAT.

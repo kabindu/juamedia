@@ -10,6 +10,7 @@
 
 (function () {
   "use strict";
+  if (window.JuaChat) { return; }   // never build the widget twice
 
   /* ----------------------------------------------------------------------
      Knowledge base. Each entry: keywords to match, plus an answer.
@@ -127,7 +128,7 @@
       id: "library",
       k: ["stats", "statistics", "numbers", "data", "research", "guide", "guides", "playbook",
           "free guide", "resources", "takwimu", "miongozo"],
-      a: "Two things, both free and both open on the site. Marketing numbers (stats.html) has 36 figures across social media, search and AI, ad spend, websites, WhatsApp and online shops. Guides and playbooks (guides.html) has nine step-by-step documents — the same checklists we hand a new client in their first week. No form and no download; ask and we send whichever one you want.",
+      a: "Two things, both free and both open on the site. Marketing numbers (blog.html#numbers) has 36 figures across social media, search and AI, ad spend, websites, WhatsApp and online shops. Guides and playbooks (blog.html#guides) has nine step-by-step documents — the same checklists we hand a new client in their first week. No form and no download; ask and we send whichever one you want.",
       sw: "Vitu viwili, vyote bure na viko wazi kwenye tovuti. Takwimu za masoko zina takwimu 36 kuhusu mitandao, utafutaji na AI, matumizi ya matangazo, tovuti, WhatsApp na maduka ya mtandaoni. Miongozo ina nyaraka tisa za hatua kwa hatua. Hakuna fomu wala upakuaji.",
       chips: ["Open the marketing numbers", "Which guide should I read?", "Get a free audit"]
     },
@@ -444,7 +445,7 @@
         '<input id="juaChatInput" type="text" autocomplete="off" placeholder="Ask about our services...">' +
         '<button class="chat-send" type="submit" aria-label="Send"></button>' +
       '</form>' +
-      '<p class="chat-foot">Answers cover our services. For a quote, <a href="contact.html">talk to a strategist</a>.</p>';
+      '<p class="chat-foot">Answers cover our services. For a quote, <a href="about.html#contact">talk to a strategist</a>.</p>';
 
     document.body.appendChild(launcher);
     document.body.appendChild(panel);
@@ -463,6 +464,17 @@
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && panel.classList.contains("open")) { close(); }
     });
+
+    // Public hook: the "Ask Jua" boxes on the pages call JuaChat.ask(question).
+    window.JuaChat = {
+      open: open,
+      ask: function (q) { open(); setTimeout(function () { send(q); }, 200); }
+    };
+    if (window.JUA_CHAT_PENDING) {
+      var q = window.JUA_CHAT_PENDING;
+      window.JUA_CHAT_PENDING = null;
+      window.JuaChat.ask(q);
+    }
   }
 
   if (document.readyState === "loading") {

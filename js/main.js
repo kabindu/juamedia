@@ -452,34 +452,6 @@
     } else { fn(); }
   }
 
-  /* 1. Announcement bar: cycle the platform people want to be found on */
-  function rotator() {
-    var el = document.getElementById("rotator");
-    if (!el) { return; }
-
-    var items = [
-      ["TikTok", '<path d="M9 12a4 4 0 1 0 4 4V4c1 2 3 3.5 5 3.6"/>'],
-      ["Instagram", '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/>'],
-      ["Google", '<circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/>'],
-      ["YouTube", '<rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor"/>'],
-      ["ChatGPT", '<circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>'],
-      ["Facebook", '<path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H8v3h2v6h3v-6h3l1-3h-4v-2a1 1 0 0 1 1-1z"/>']
-    ];
-    var i = 0;
-
-    setInterval(function () {
-      el.classList.add("fade");
-      setTimeout(function () {
-        i = (i + 1) % items.length;
-        el.innerHTML =
-          '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
-          'stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-          items[i][1] + '</svg><b>' + items[i][0] + '</b>';
-        el.classList.remove("fade");
-      }, 260);
-    }, 2600);
-  }
-
   /* 2. Mega menu: tabbed service categories */
   function megaTabs() {
     $$(".mega").forEach(function (mega) {
@@ -524,7 +496,7 @@
 
     var step = 3;
     var posts = $$(".post");
-    var shown = 6;
+    var shown = 9;
 
     function paint() {
       posts.forEach(function (p, i) { p.style.display = i < shown ? "" : "none"; });
@@ -543,7 +515,7 @@
     document.addEventListener("jm:filter", function (e) {
       var all = !e.detail || e.detail.active === "all";
       if (all) {
-        shown = 6;
+        shown = 9;
         posts.forEach(function (p) { p.style.display = ""; });
         btn.parentNode.style.display = posts.length > shown ? "" : "none";
         paint();
@@ -624,7 +596,6 @@
   }
 
   ready(function () {
-    rotator();
     heroWord();
     megaTabs();
     megaToggles();
@@ -657,6 +628,8 @@
     else { setTimeout(fn, 1200); }
   }
 
+  window.JuaLoad = load;   // lets the "Ask Jua" boxes bring the chat forward
+
   var sw = false;
   try { sw = localStorage.getItem("juamedia.lang") === "sw"; } catch (e) {}
 
@@ -673,7 +646,7 @@
 })();
 
 /* ==========================================================================
-   Scroll progress + hero info strip
+   Scroll progress
    ========================================================================== */
 (function () {
   "use strict";
@@ -709,46 +682,8 @@
     paint();
   }
 
-  /* One short fact at a time, so the hero says a little more without
-     adding another block of text to read. */
-  function heroTicker() {
-    var el = document.getElementById("heroTicker");
-    if (!el) { return; }
-
-    var lines = [
-      "We reply to every enquiry within one working day.",
-      "Every enquiry is tracked to the campaign that made it.",
-      "Your domain, website and ad accounts stay in your name.",
-      "Working across Nairobi, Mombasa, Kisumu and Kampala.",
-      "The audit is free, and there is nothing to sign."
-    ];
-    var i = 0;
-
-    /* written by JS, so the TreeWalker in i18n.js can never see it */
-    function paint() {
-      var lang = "en";
-      try { lang = localStorage.getItem("juamedia.lang") || "en"; } catch (e) {}
-      var sw = lang === "sw" && window.JuaLang ? window.JuaLang.lookup(lines[i]) : null;
-      el.textContent = sw || lines[i];
-    }
-
-    document.addEventListener("jm:lang", paint);
-
-    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { return; }
-
-    setInterval(function () {
-      el.classList.add("out");
-      setTimeout(function () {
-        i = (i + 1) % lines.length;
-        paint();
-        el.classList.remove("out");
-      }, 280);
-    }, 4200);
-  }
-
   ready(function () {
     progressBar();
-    heroTicker();
   });
 })();
 
@@ -757,9 +692,13 @@
    ========================================================================== */
 (function () {
   "use strict";
+  /* pages now hold several articles, each with its own contents list */
   function tocSpy() {
-    var toc = document.querySelector(".toc");
-    if (!toc || !("IntersectionObserver" in window)) { return; }
+    Array.prototype.forEach.call(document.querySelectorAll(".toc"), spy);
+  }
+
+  function spy(toc) {
+    if (!("IntersectionObserver" in window)) { return; }
 
     var links = {};
     var heads = [];
@@ -807,4 +746,240 @@
   } else {
     tocSpy();
   }
+})();
+
+/* ==========================================================================
+   In-page views
+   Services, Results and Insights each hold their detail pages as hidden
+   .entry blocks. The URL fragment picks which one is open:
+     services.html#service-seo        opens that service
+     blog.html#get-named-by-chatgpt   opens that article
+     blog.html#numbers--social        opens the numbers view at Social
+   Any other fragment (or none) shows the page's listing.
+   Without JavaScript every entry is simply shown in sequence.
+   ========================================================================== */
+(function () {
+  "use strict";
+
+  var entries = document.querySelectorAll(".entry");
+  var listing = document.querySelector(".listing");
+  if (!entries.length || !listing) { return; }
+
+  var baseTitle = document.title;
+  var current = null;
+
+  function headerOffset() {
+    var h = document.querySelector(".site-header");
+    return h ? h.getBoundingClientRect().height + 16 : 90;
+  }
+
+  function scrollToEl(el) {
+    var y = el.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+    window.scrollTo(0, Math.max(0, y));
+  }
+
+  function route() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var target = id ? document.getElementById(id) : null;
+    var entry = target && target.closest ? target.closest(".entry") : null;
+
+    Array.prototype.forEach.call(entries, function (e) {
+      e.classList.toggle("open", e === entry);
+    });
+    document.body.classList.toggle("viewing", !!entry);
+
+    if (entry) {
+      var h1 = entry.querySelector("h1");
+      document.title = (h1 ? h1.textContent.trim() : entry.getAttribute("data-back")) + " | Jua Media";
+      if (target === entry) {
+        if (current !== entry) { window.scrollTo(0, 0); }
+      } else {
+        scrollToEl(target);
+      }
+    } else {
+      document.title = baseTitle;
+      if (current) {
+        // coming back from an entry: land on the listing (or the anchor asked for)
+        if (target && id !== "all") { scrollToEl(target); } else { window.scrollTo(0, 0); }
+      } else if (target && id !== "all") {
+        scrollToEl(target);
+      }
+    }
+    current = entry;
+  }
+
+  window.addEventListener("hashchange", route);
+  route();
+})();
+
+/* ==========================================================================
+   Platform switcher
+   One clock drives three things, so they always agree:
+     - the word in the top bar          (#rotator, every page)
+     - the photo and result in the hero (#heroShow, home page)
+     - the pressed platform button      (.platforms [data-platform])
+   Hovering the hero or the buttons pauses it; choosing a platform holds it
+   there for a while. With reduced motion it only moves when asked.
+   ========================================================================== */
+(function () {
+  "use strict";
+
+  var PLATFORMS = [
+    ["TikTok",    '<path d="M9 12a4 4 0 1 0 4 4V4c1 2 3 3.5 5 3.6"/>'],
+    ["Instagram", '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/>'],
+    ["Google",    '<circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/>'],
+    ["YouTube",   '<rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor"/>'],
+    ["Facebook",  '<path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H8v3h2v6h3v-6h3l1-3h-4v-2a1 1 0 0 1 1-1z"/>'],
+    ["ChatGPT",   '<circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>']
+  ];
+  var STEP = 3200, HOLD = 9000;
+
+  function init() {
+    var rot = document.getElementById("rotator");
+    var show = document.getElementById("heroShow");
+    var slides = show ? show.querySelectorAll(".slide") : [];
+    var buttons = document.querySelectorAll(".platforms [data-platform]");
+    if (!rot && !slides.length) { return; }
+
+    var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var i = 0, hovering = false, heldUntil = 0;
+
+    function paint(n) {
+      i = (n + PLATFORMS.length) % PLATFORMS.length;
+      var name = PLATFORMS[i][0];
+
+      if (rot) {
+        rot.classList.add("fade");
+        setTimeout(function () {
+          rot.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+            'stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+            PLATFORMS[i][1] + "</svg><b>" + name + "</b>";
+          rot.classList.remove("fade");
+        }, still ? 0 : 220);
+      }
+      Array.prototype.forEach.call(slides, function (s) {
+        s.classList.toggle("on", s.getAttribute("data-platform") === name);
+      });
+      Array.prototype.forEach.call(buttons, function (b) {
+        var on = b.getAttribute("data-platform") === name;
+        b.classList.toggle("on", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
+
+    Array.prototype.forEach.call(buttons, function (b) {
+      function pick() {
+        var name = b.getAttribute("data-platform");
+        for (var k = 0; k < PLATFORMS.length; k++) {
+          if (PLATFORMS[k][0] === name) { heldUntil = Date.now() + HOLD; paint(k); return; }
+        }
+      }
+      b.addEventListener("click", pick);
+      b.addEventListener("mouseenter", pick);
+    });
+
+    [show, buttons.length ? buttons[0].parentNode : null].forEach(function (el) {
+      if (!el) { return; }
+      el.addEventListener("mouseenter", function () { hovering = true; });
+      el.addEventListener("mouseleave", function () { hovering = false; });
+    });
+
+    if (still) { return; }
+    setInterval(function () {
+      if (hovering || document.hidden || Date.now() < heldUntil) { return; }
+      paint(i + 1);
+    }, STEP);
+  }
+
+  if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", init); }
+  else { init(); }
+})();
+
+/* ==========================================================================
+   Cross-fading photo sets  (<figure class="slides" data-auto> with <img>s)
+   Each set starts a little after the previous one so they never all change
+   at once, and only runs while it is on screen.
+   ========================================================================== */
+(function () {
+  "use strict";
+
+  function init() {
+    var sets = document.querySelectorAll(".slides[data-auto]");
+    if (!sets.length) { return; }
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { return; }
+
+    Array.prototype.forEach.call(sets, function (set, n) {
+      var imgs = set.querySelectorAll("img");
+      if (imgs.length < 2) { return; }
+      var k = 0, visible = true;
+
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(set);
+      }
+      setTimeout(function () {
+        setInterval(function () {
+          if (!visible || document.hidden) { return; }
+          imgs[k].classList.remove("on");
+          k = (k + 1) % imgs.length;
+          imgs[k].classList.add("on");
+        }, 3600);
+      }, (n % 4) * 900);
+    });
+  }
+
+  if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", init); }
+  else { init(); }
+})();
+
+/* ==========================================================================
+   Results ticker: a second copy of the list makes the loop seamless
+   ========================================================================== */
+(function () {
+  "use strict";
+  function init() {
+    var set = document.querySelector(".ticker-set");
+    if (!set) { return; }
+    var copy = set.cloneNode(true);
+    copy.setAttribute("aria-hidden", "true");
+    Array.prototype.forEach.call(copy.querySelectorAll("a"), function (a) { a.tabIndex = -1; });
+    set.parentNode.appendChild(copy);
+  }
+  if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", init); }
+  else { init(); }
+})();
+
+/* ==========================================================================
+   "Ask Jua" prompt boxes and buttons
+   <form data-ai-ask> with an input, [data-q] suggestion buttons, and
+   .ai-ask-btn buttons on articles. Each hands its question to the chat,
+   loading the chat first if the visitor got here before it did.
+   ========================================================================== */
+(function () {
+  "use strict";
+
+  function ask(q) {
+    q = (q || "").trim();
+    if (!q) { return; }
+    if (window.JuaChat) { window.JuaChat.ask(q); return; }
+    window.JUA_CHAT_PENDING = q;
+    if (window.JuaLoad) { window.JuaLoad("js/chat.js"); }
+  }
+
+  function init() {
+    Array.prototype.forEach.call(document.querySelectorAll("form[data-ai-ask]"), function (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var input = form.querySelector("input");
+        ask(input.value);
+        input.value = "";
+      });
+    });
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-q]");
+      if (b) { ask(b.getAttribute("data-q")); }
+    });
+  }
+
+  if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", init); }
+  else { init(); }
 })();

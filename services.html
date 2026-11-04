@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.className+=" js";</script>
 </head>
@@ -17,8 +17,8 @@
 <div class="announce">
   <div class="wrap">
     <p>Do you want your business to be found on
-      <span class="rotator" id="rotator"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4c1 2 3 3.5 5 3.6"/></svg><b>TikTok</b></span>?</p>
-    <a class="btn btn-plain" href="contact.html">Let&rsquo;s talk</a>
+      <span class="rotator" id="rotator"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4c1 2 3 3.5 5 3.6"/></svg><b>TikTok</b></span>?</p>
+    <a class="btn btn-white btn-sm" href="about.html#contact">Let&rsquo;s talk</a>
   </div>
 </div>
 
@@ -47,13 +47,14 @@
 
     <nav class="nav" id="siteNav" aria-label="Main">
       <ul>
+        <li><a href="index.html">Home</a></li>
         <li class="has-mega">
           <a href="blog.html">Insights<span class="caret"></span></a>
           <button class="sub-toggle" type="button" aria-label="Show insights menu" aria-expanded="false"></button>
           <div class="mega" id="megaBlog">
             <div class="mega-inner mega-blog">
               <div>
-                <h4 style="font-family:var(--head);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Insight categories</h4>
+                <h4 class="mega-label">Insight categories</h4>
                 <div class="mega-cats">
                   <a href="blog.html#cat=ai">AI Search</a>
                   <a href="blog.html#cat=seo">SEO</a>
@@ -70,22 +71,22 @@
                 </div>
 
                 <div class="mega-extra">
-                  <a href="stats.html">Marketing numbers<span>36 figures, 6 topics</span></a>
-                  <a href="guides.html">Guides &amp; playbooks<span>Nine, free to read</span></a>
+                  <a href="blog.html#numbers">Marketing numbers<span>36 figures, 6 topics</span></a>
+                  <a href="blog.html#guides">Guides &amp; playbooks<span>Nine, free to read</span></a>
                 </div>
               </div>
               <div class="mega-feat">
                 <h4>Featured &amp; recently published</h4>
-                <a class="feat-row" href="rank-on-page-one-kenya.html">
-                  <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=70&w=1000&h=563" alt="" loading="lazy" width="300" height="190">
+                <a class="feat-row" href="blog.html#rank-on-page-one-kenya">
+                  <img src="assets/img/1560472354-b33ff0c44a43.jpg" alt="" loading="lazy" width="300" height="190">
                   <span><b>How Kenyan businesses can rank on page one in 2026</b><span class="txt-link">Read article</span></span>
                 </a>
-                <a class="feat-row" href="tiktok-for-kenyan-brands.html">
-                  <img src="https://images.unsplash.com/photo-1759215524472-1b0686fdbd87?auto=format&fit=crop&q=70&w=1000&h=563" alt="" loading="lazy" width="300" height="190">
+                <a class="feat-row" href="blog.html#tiktok-for-kenyan-brands">
+                  <img src="assets/img/1759215524472-1b0686fdbd87.jpg" alt="" loading="lazy" width="300" height="190">
                   <span><b>What actually works on TikTok for Kenyan brands</b><span class="txt-link">Read article</span></span>
                 </a>
-                <a class="feat-row" href="get-named-by-chatgpt.html">
-                  <img src="https://images.unsplash.com/photo-1625296276703-3fbc924f07b5?auto=format&fit=crop&q=70&w=1000&h=563" alt="" loading="lazy" width="300" height="190">
+                <a class="feat-row" href="blog.html#get-named-by-chatgpt">
+                  <img src="assets/img/1625296276703-3fbc924f07b5.jpg" alt="" loading="lazy" width="300" height="190">
                   <span><b>Getting your business named by ChatGPT and AI Overviews</b><span class="txt-link">Read article</span></span>
                 </a>
               </div>
@@ -149,32 +150,42 @@
           </div>
         </li>
         <li><a href="portfolio.html">Results</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="services.html#pricing">Pricing</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
       </ul>
     </nav>
 
   </div>
 </header>
 
-<section class="hero" style="padding:66px 0 76px">
-  <div class="tri-deco" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="listing" id="all">
+<section class="hero hero-page">
   <div class="wrap">
-    <span class="kicker">What we do</span>
     <h1>Ten ways we get you <em>found</em> and <em>chosen</em></h1>
-    <p class="lede" style="max-width:62ch;color:#c3d2ec">From the TikTok your customer
+    <p class="lede">From the TikTok your customer
        scrolls at lunch to the AI assistant they ask before they buy.</p>
     <div class="btn-row" style="margin-top:28px">
-      <a class="btn btn-xl" href="contact.html">Get my free plan</a>
-      <a class="btn btn-white btn-xl" style="background:transparent;color:#fff" href="pricing.html">How we price</a>
+      <a class="btn btn-xl" href="about.html#contact">Get my free plan</a>
+      <a class="btn btn-ghost btn-xl" href="services.html#pricing">How we price</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-strip">
+      <figure class="slides" data-auto>
+          <img src="assets/img/1531482615713-2afd69097998.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1574717024653-61fd2cf4d44d.jpg" alt="" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1504868584819-f8e8b4b6d7e3.jpg" alt="" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1541462608143-67571c6738dd.jpg" alt="" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1561070791-2526d30994b5.jpg" alt="" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1556761175-5973dc0f32e7.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
     </div>
   </div>
 </section>
 
 <section class="platforms">
   <div class="wrap">
-    <span class="ask">Want your business seen here?</span>
     <div class="marks">
       <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4c1 2 3 3.5 5 3.6"/></svg>TikTok</span>
       <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>Instagram</span>
@@ -186,14 +197,67 @@
   </div>
 </section>
 
+<section class="sec ai-band" id="ai-everywhere">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="ai-badge"><svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg> AI</span>
+      <h2>AI runs through all ten</h2>
+      <p>Buyers now ask assistants before they ask a search engine. Every service we run is
+         built to be found, quoted and recommended by AI &mdash; and measured when it is.</p>
+    </div>
+    <div class="ai-grid">
+      <a class="ai-card rv" href="services.html#service-ai">
+        <svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg>
+        <h3>AI search optimisation</h3>
+        <p>Be the brand ChatGPT, Gemini and AI Overviews name when buyers ask.</p>
+      </a>
+      <a class="ai-card rv" href="services.html#service-ai">
+        <svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg>
+        <h3>AI Overview tracking</h3>
+        <p>A monthly record of how AI answers describe your business.</p>
+      </a>
+      <a class="ai-card rv" href="services.html#service-content">
+        <svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg>
+        <h3>Content built to be quoted</h3>
+        <p>Specific enough for the press and for AI assistants to lift directly.</p>
+      </a>
+      <a class="ai-card rv" href="services.html#service-pr">
+        <svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg>
+        <h3>Corroboration for AI</h3>
+        <p>Credible third-party mentions, which assistants weigh far above self-description.</p>
+      </a>
+      <a class="ai-card rv" href="services.html#service-google">
+        <svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg>
+        <h3>AI-driven Google campaigns</h3>
+        <p>Shopping and Performance Max, fed with your product data and real conversions so they learn from enquiries.</p>
+      </a>
+      <a class="ai-card rv" href="#ai-services-ask">
+        <svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg>
+        <h3>Ask Jua, our assistant</h3>
+        <p>Questions about our services, pricing and process, answered instantly, day or night.</p>
+      </a>
+    </div>
+    <div class="ai-box ai-box-sm" id="ai-services-ask">
+      <span class="ai-badge"><svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg> Ask Jua</span>
+      <p>Not sure which service you need? Ask.</p>
+      <form class="ai-ask" data-ai-ask>
+        <label class="sr-only" for="ai-services">Your question</label>
+        <svg class="spark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 6.4 6.4 2.1-6.4 2.1L12 19.5l-2.1-6.4L3.5 11l6.4-2.1z"/><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg>
+        <input type="text" id="ai-services" name="q" placeholder="e.g. Which service gets me more enquiries?" autocomplete="off">
+        <button class="btn" type="submit">Ask Jua</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
 <section class="sec">
   <div class="wrap">
     <article class="split rv" id="social" style="margin-bottom:76px">
       <div>
-        <img src="https://images.unsplash.com/photo-1683721003111-070bcc053d8b?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1683721003111-070bcc053d8b.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 01</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Social media management</h2>
         <p class="lede" style="margin-bottom:18px">Your customers are on TikTok and Instagram right now. We put you in front of them every day, with content built to sell and paid campaigns aimed at enquiries.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -204,37 +268,19 @@
           <li>Paid and catalogue campaigns</li>
           <li>Influencer partnerships</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-social">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-social">
-              <dl class="detail">
-                <dt>Organic Social Media</dt>
-                <dd>Daily TikTok, Instagram and Facebook that people actually follow.</dd>
-                <dt>Meta &amp; TikTok Ads</dt>
-                <dd>Paid social built for enquiries and orders, not impressions.</dd>
-                <dt>Influencer Marketing</dt>
-                <dd>Kenyan creators matched to your product and budget.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-social.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-social">Read more about this service</a>
         </div>
       </div>
     </article>
 
     <article class="split rv" id="google" style="margin-bottom:76px">
       <div style="order:2">
-        <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1591696205602-2f950c417cb9.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 02</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Google Ads and paid media</h2>
         <p class="lede" style="margin-bottom:18px">Be the first name on the screen the moment somebody searches for what you sell, without burning budget on clicks that never buy.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -245,37 +291,19 @@
           <li>Google Business Profile and Maps</li>
           <li>Strict budget pacing</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-google">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-google">
-              <dl class="detail">
-                <dt>Google Ads</dt>
-                <dd>Search, Shopping and Performance Max run on your numbers.</dd>
-                <dt>YouTube Advertising</dt>
-                <dd>Video that reaches buyers before your competitors do.</dd>
-                <dt>Google Business &amp; Maps</dt>
-                <dd>Own the map pack in every neighbourhood you trade in.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-google.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-google">Read more about this service</a>
         </div>
       </div>
     </article>
 
     <article class="split rv" id="seo" style="margin-bottom:76px">
       <div>
-        <img src="https://images.unsplash.com/photo-1684835609103-57dc56e07433?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1684835609103-57dc56e07433.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 03</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Search engine optimisation</h2>
         <p class="lede" style="margin-bottom:18px">Rankings are the asset you keep. We fix the foundations, win the keywords that carry intent, and build the authority Google rewards.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -286,39 +314,19 @@
           <li>Programmatic pages at scale</li>
           <li>Entity and brand authority</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-seo">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-seo">
-              <dl class="detail">
-                <dt>Search Engine Optimisation</dt>
-                <dd>Climb the rankings that bring buyers, not browsers.</dd>
-                <dt>Local SEO &amp; Maps</dt>
-                <dd>Own the map pack in every neighbourhood you trade in.</dd>
-                <dt>Programmatic pages</dt>
-                <dd>Hundreds of location and product pages built from one template.</dd>
-                <dt>Entity and brand authority</dt>
-                <dd>The signals that tell Google who you are and what you sell.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-seo.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-seo">Read more about this service</a>
         </div>
       </div>
     </article>
 
     <article class="split rv" id="ai" style="margin-bottom:76px">
       <div style="order:2">
-        <img src="https://images.unsplash.com/photo-1674027001840-1a3e834eb73f?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1674027001840-1a3e834eb73f.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 04</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">AI search optimisation</h2>
         <p class="lede" style="margin-bottom:18px">Buyers now ask ChatGPT, Gemini and Google AI Overviews before they ask a human. If those answers do not name you, you are invisible.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -329,35 +337,19 @@
           <li>Crawler access and llms.txt</li>
           <li>Monthly AI visibility report</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-ai">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-ai">
-              <dl class="detail">
-                <dt>AI Search Optimisation</dt>
-                <dd>Be the brand ChatGPT, Gemini and AI Overviews name when buyers ask.</dd>
-                <dt>AI Overview tracking</dt>
-                <dd>A monthly record of how AI answers describe your business.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-ai.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-ai">Read more about this service</a>
         </div>
       </div>
     </article>
 
     <article class="split rv" id="content" style="margin-bottom:76px">
       <div>
-        <img src="https://images.unsplash.com/photo-1781606989090-edcc3dac7678?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1781606989090-edcc3dac7678.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 05</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Content marketing</h2>
         <p class="lede" style="margin-bottom:18px">Articles, guides and video that pull in buyers month after month instead of renting attention from an ad platform.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -368,37 +360,19 @@
           <li>Refreshing and interlinking</li>
           <li>YouTube optimisation</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-content">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-content">
-              <dl class="detail">
-                <dt>Content Marketing</dt>
-                <dd>Articles and guides that pull customers in month after month.</dd>
-                <dt>Copywriting</dt>
-                <dd>English, Kiswahili and Sheng, written to sell.</dd>
-                <dt>Email &amp; SMS</dt>
-                <dd>Campaigns that bring past customers back.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-content.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-content">Read more about this service</a>
         </div>
       </div>
     </article>
 
     <article class="split rv" id="web" style="margin-bottom:76px">
       <div style="order:2">
-        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1558655146-d09347e92766.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 06</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Websites and conversion</h2>
         <p class="lede" style="margin-bottom:18px">A site that loads fast on a Kenyan phone and is tuned every month to convert more of the traffic you already pay for.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -409,37 +383,19 @@
           <li>Hosting, domains and e-mail</li>
           <li>Staff training</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-web">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-web">
-              <dl class="detail">
-                <dt>Website Design</dt>
-                <dd>Fast, mobile-first sites built to convert.</dd>
-                <dt>E-commerce &amp; M-Pesa</dt>
-                <dd>Online shops with the checkout Kenyans actually use.</dd>
-                <dt>Conversion Optimisation</dt>
-                <dd>Turn more of the traffic you already pay for into enquiries.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-web.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-web">Read more about this service</a>
         </div>
       </div>
     </article>
 
     <article class="split rv" id="brand" style="margin-bottom:76px">
       <div>
-        <img src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1602576666092-bf6447a729fc.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 07</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Branding and creative</h2>
         <p class="lede" style="margin-bottom:18px">Before you advertise, the message has to be right, and you need creative worth putting money behind.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -450,37 +406,19 @@
           <li>Packaging and print</li>
           <li>Signage and vehicle branding</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-brand">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-brand">
-              <dl class="detail">
-                <dt>Branding &amp; Identity</dt>
-                <dd>Logo, colours and a brand guide that works on a matatu and a phone.</dd>
-                <dt>Photography &amp; Video</dt>
-                <dd>Product and location shoots, cut for every platform.</dd>
-                <dt>Packaging &amp; Print</dt>
-                <dd>Shelf-ready design and point-of-sale material.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-brand.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-brand">Read more about this service</a>
         </div>
       </div>
     </article>
 
     <article class="split rv" id="data" style="margin-bottom:76px">
       <div style="order:2">
-        <img src="https://images.unsplash.com/photo-1633307057722-a4740ba0c5d0?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1633307057722-a4740ba0c5d0.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 08</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Data and reporting</h2>
         <p class="lede" style="margin-bottom:18px">One dashboard, one plain report. Every enquiry traced back to the campaign that created it.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -491,39 +429,19 @@
           <li>Monthly and quarterly reports</li>
           <li>Funnel analysis</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-data">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-data">
-              <dl class="detail">
-                <dt>Conversion Tracking</dt>
-                <dd>Every call, form and WhatsApp traced to its campaign.</dd>
-                <dt>Live Dashboards</dt>
-                <dd>One screen showing what your marketing is doing today.</dd>
-                <dt>Lead Attribution</dt>
-                <dd>Know which shilling produced which customer.</dd>
-                <dt>Market Research</dt>
-                <dd>What your buyers search for, and what your rivals miss.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-data.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-data">Read more about this service</a>
         </div>
       </div>
     </article>
 
     <article class="split rv" id="pr" style="margin-bottom:76px">
       <div>
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=70&w=1100&h=820" alt="" loading="lazy" width="1000" height="750">
+        <img src="assets/img/1519389950473-47ba0277781c.jpg" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 09</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Digital PR and link building</h2>
         <p class="lede" style="margin-bottom:18px">Google and AI engines both trust businesses other credible sites talk about. We earn those mentions honestly.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -534,25 +452,10 @@
           <li>Review strategy</li>
           <li>Toxic backlink clean-up</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-pr">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-pr">
-              <dl class="detail">
-                <dt>Digital PR</dt>
-                <dd>Earn the Kenyan press mentions that build real authority.</dd>
-                <dt>Review strategy</dt>
-                <dd>More reviews, answered properly, on the profiles that matter.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-pr.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-pr">Read more about this service</a>
         </div>
       </div>
     </article>
@@ -562,7 +465,6 @@
         <img src="https://images.pexels.com/photos/6476260/pexels-photo-6476260.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="" loading="lazy" width="1000" height="750">
       </div>
       <div>
-        <span class="kicker">Service 10</span>
         <h2 style="font-size:clamp(1.6rem,2.8vw,2.3rem)">Print, radio and activations</h2>
         <p class="lede" style="margin-bottom:18px">Not every customer is online all day. We buy the offline media that still moves product here, and make every channel trackable.</p>
         <ul class="tri-list" style="columns:2;column-gap:26px">
@@ -573,40 +475,2368 @@
           <li>Flyers and point of sale</li>
           <li>Unique tracking numbers</li>
         </ul>
-        <div class="acc acc-tight">
-          <div class="acc-item">
-            <button class="acc-q" aria-expanded="false" aria-controls="d-offline">
-              What this includes<span class="sign"></span>
-            </button>
-            <div class="acc-a" id="d-offline">
-              <dl class="detail">
-                <dt>Radio, Print &amp; Outdoor</dt>
-                <dd>The offline media that still moves product here.</dd>
-                <dt>Market activations and roadshows</dt>
-                <dd>Sampling and demos where your customers already gather.</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
 
         <div class="btn-row" style="margin-top:24px">
-          <a class="btn btn-sm" href="contact.html">Get my free plan</a>
-          <a class="txt-link" href="service-offline.html">Read more about this service</a>
+          <a class="btn btn-sm" href="about.html#contact">Get my free plan</a>
+          <a class="txt-link" href="services.html#service-offline">Read more about this service</a>
         </div>
       </div>
     </article>
   </div>
 </section>
 
-<section class="sec cta">
-  <div class="tri-deco" aria-hidden="true"><i></i><i></i><i></i></div>
+<section class="page-title" id="pricing">
   <div class="wrap">
-    <span class="kicker rv">Free, no obligation</span>
+    <h2>We quote per client</h2>
+    <p class="sub">A hardware shop opening a second branch and a sacco serving twenty
+       thousand members need completely different work. A price list would only mean
+       selling you somebody else's plan.</p>
+    <div class="btn-row" style="justify-content:center;margin-top:30px">
+      <a class="btn btn-xl" href="about.html#contact">Get my quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head ctr rv"><h2>Three things we look at</h2></div>
+    <div class="grid g3">
+      <div class="card card-media card-pad rv"><figure><img src="assets/img/1533750349088-cd871a92f312.jpg" alt="" loading="lazy" width="1400" height="933"></figure><div class="body"><span class="no">01</span><h3>Your goal</h3><p>Filling a second branch is a different job from selling five hundred units a month. We price the work the goal needs.</p></div></div>
+      <div class="card card-media card-pad rv d1"><figure><img src="assets/img/1531482615713-2afd69097998.jpg" alt="" loading="lazy" width="1400" height="933"></figure><div class="body"><span class="no">02</span><h3>Your capability</h3><p>If you already have a designer or an in-house marketer, you pay us for less. We fill the gap, not the whole role.</p></div></div>
+      <div class="card card-media card-pad rv d2"><figure><img src="assets/img/1557804506-669a67965ba0.jpg" alt="" loading="lazy" width="1400" height="933"></figure><div class="body"><span class="no">03</span><h3>Your vision</h3><p>Some clients want steady enquiries. Others are launching a brand. One is a rhythm, the other is a push.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <h2>Pick the shape that fits, then we quote it</h2>
+        <p class="lede">Every one of these is priced on your goal and your budget, and
+           agreed in writing before anything starts.</p>
+        <figure class="slides shape-img" data-auto>
+          <img src="assets/img/1600880292203-757bb62b4baf.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1551836022-d5d88e9218df.jpg" alt="" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1558403194-611308249627.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+      </div>
+      <ul class="tri-list rv d1">
+        <li><b>One channel.</b> A single channel run properly, proven before you spend more.</li>
+        <li><b>Multi-channel.</b> Two or three channels working together with content produced for you.</li>
+        <li><b>Outsourced marketing department.</b> Everything, run by a senior team.</li>
+        <li><b>One-off project.</b> A website, a shop, a brand or a shoot, quoted once.</li>
+        <li><b>Free marketing audit.</b> A written review of what you have. No obligation.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <h2>What is always included</h2>
+        <ul class="tri-list">
+          <li><b>The audit and the proposal.</b> Free, before you commit.</li>
+          <li><b>Tracking and analytics setup.</b> So the numbers are real.</li>
+          <li><b>Your monthly report and call.</b> Never an extra line item.</li>
+          <li><b>Everything in your name.</b> Domain, hosting and ad accounts.</li>
+          <li><b>A clean handover.</b> No exit fees, no hostage accounts.</li>
+        </ul>
+      </div>
+      <div class="rv d1">
+        <div class="acc">
+          <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="p1">Why not publish prices?<span class="sign"></span></button>
+            <div class="acc-a" id="p1"><p>The same figure would be far too much for one business and far too little for another. We would rather spend an hour on your business and give you a number that is actually right.</p></div></div>
+          <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="p2">Is ad budget part of your fee?<span class="sign"></span></button>
+            <div class="acc-a" id="p2"><p>No. Our fee pays for the work. Money going to Google or Meta is paid from your own account, so you can check every shilling yourself.</p></div></div>
+          <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="p3">Do you take a percentage of spend?<span class="sign"></span></button>
+            <div class="acc-a" id="p3"><p>Never. That would reward us for spending more of your money. One fixed monthly fee, agreed up front.</p></div></div>
+          <div class="acc-item"><button class="acc-q" aria-expanded="false" aria-controls="p4">How long am I tied in?<span class="sign"></span></button>
+            <div class="acc-a" id="p4"><p>Three months to start, because nothing meaningful can be judged in less. After that it is month to month on thirty days' notice.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-social" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1432888622747-4eb9a8efeb07.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Social media management</p>
+    <h1>Social media management</h1>
+    <p class="lede">Your customers are on TikTok and Instagram right now. We put you in front of them every day, with content built to sell and paid campaigns aimed at enquiries.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Shops, restaurants, camps, clinics</span></div>
+        <div><b>Live in</b><span>Live in 2 weeks</span></div>
+        <div><b>Rhythm</b><span>4-5 posts a week</span></div>
+        <div><b>You get</b><span>Inbox answered daily</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>You post when you remember, then go quiet for three weeks.</li>
+        <li>The page has followers but the phone does not ring.</li>
+        <li>Somebody asked a price in the comments four days ago.</li>
+        <li>You are filming a lot and cannot tell what any of it did.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">Social media stops being a chore when it stops being a guessing game. We build a calendar you can actually sustain, film the content in short bursts rather than all day, and treat the comments as the sales channel they are.</p>
+        <p class="lede">The work is unglamorous and it compounds. Four posts a week for six months beats twelve posts a week for three weeks and then silence, every time we have measured it.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-social--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-social--subs">
+              <dl class="detail">
+          <dt>Organic Social Media</dt>
+          <dd>Daily TikTok, Instagram and Facebook that people actually follow.</dd>
+          <dt>Meta &amp; TikTok Ads</dt>
+          <dd>Paid social built for enquiries and orders, not impressions.</dd>
+          <dt>Influencer Marketing</dt>
+          <dd>Kenyan creators matched to your product and budget.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1533750349088-cd871a92f312.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>A calendar you can keep</h3>
+        <p>A fortnight of posts planned at a time, built from the questions your customers actually ask.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1574717024653-61fd2cf4d44d.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Filming in bursts</h3>
+        <p>One short session produces a month of content, filmed on a phone in your own premises.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1563986768609-322da13575f3.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Daily inbox cover</h3>
+        <p>Comments and messages answered within the hour during working days, with saved replies for the usual questions.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1611926653458-09294b3142bf.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>Paid campaigns</h3>
+        <p>Meta and TikTok budgets aimed at enquiries and orders, not reach.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1759215524472-1b0686fdbd87.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Creator partnerships</h3>
+        <p>Kenyan creators matched to your product by audience, not follower count.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1556155092-490a1ba16284.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Monthly numbers</h3>
+        <p>Enquiries produced, cost per enquiry, and which posts did the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1611162616475-46b635cb6868.jpg" alt="Short vertical video being filmed on a phone" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>How a month actually runs</h2>
+        <p>Week one we plan and film. Weeks two to four we publish, answer and adjust. At the end of the month you get one page telling you what happened and what we are changing.</p>
+        <p>Nothing depends on you being available daily. The filming session is the only thing that needs your people, and it is usually under two hours.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>TikTok, Instagram, Facebook, X</li>
+          <li>LinkedIn and WhatsApp Business</li>
+          <li>Posts, graphics and short video</li>
+          <li>Comments and DMs answered daily</li>
+          <li>Paid and catalogue campaigns</li>
+          <li>Influencer partnerships</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1531482615713-2afd69097998.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1531545514256-b1400bc00f31.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Audit</h3>
+        <p>We look at what you have posted for the last six months and what it produced.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1552664730-d307ca884978.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1533750349088-cd871a92f312.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Plan</h3>
+        <p>A fortnight of posts, mapped to the questions your buyers ask before they buy.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1574717024653-61fd2cf4d44d.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1563986768609-322da13575f3.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Film and publish</h3>
+        <p>One short session, then a steady rhythm you can see coming.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1556155092-490a1ba16284.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1543286386-713bdd548da4.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Report</h3>
+        <p>Enquiries and cost per enquiry, with the posts that produced them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#pwani-foods">
+        <span class="n">1.9M</span>
+        <b>Pwani Foods</b>
+        <span class="k">video views</span>
+      </a>
+      <a href="portfolio.html#mara-breeze-camp">
+        <span class="n">+68%</span>
+        <b>Mara Breeze Camp</b>
+        <span class="k">direct bookings</span>
+      </a>
+      <a href="portfolio.html#tumaini-sacco">
+        <span class="n">2,100</span>
+        <b>Tumaini Sacco</b>
+        <span class="k">new members</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#tiktok-for-kenyan-brands">What actually works on TikTok for Kenyan brands</a></li>
+          <li><a href="blog.html#brand-on-a-matatu">Building a brand that works on a matatu and a phone</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-social--s0">Do we have to appear on camera?<span class="sign"></span></button>
+          <div class="acc-a" id="service-social--s0"><p>No, though it helps. Plenty of our best-performing accounts never show a face: the product, the process and the premises carry it. If someone is willing, we will coach them, and the first session is always the worst one.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-social--s1">Which platforms should we be on?<span class="sign"></span></button>
+          <div class="acc-a" id="service-social--s1"><p>Usually two, rarely more. We pick them from where your buyers already are, not from where it is fashionable to be. For most Kenyan businesses that means TikTok or Instagram plus WhatsApp, with Facebook if your audience skews older.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-social--s2">Who owns the accounts?<span class="sign"></span></button>
+          <div class="acc-a" id="service-social--s2"><p>You do, always. We work inside accounts registered in your name, and if we part ways you keep everything, including the content library.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-social--s3">What if we already have someone posting?<span class="sign"></span></button>
+          <div class="acc-a" id="service-social--s3"><p>Then we often train them instead of replacing them. It is cheaper for you and it survives us leaving. We will say so honestly if that is the better option.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-google" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1460925895917-afdab827c52f.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Google Ads and paid media</p>
+    <h1>Google Ads and paid media</h1>
+    <p class="lede">Be the first name on the screen the moment somebody searches for what you sell, without burning budget on clicks that never buy.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Any business with a budget to prove</span></div>
+        <div><b>Live in</b><span>Enquiries in week one</span></div>
+        <div><b>Rhythm</b><span>Weekly search term review</span></div>
+        <div><b>You get</b><span>You own the account</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>The budget goes out every month and nobody can say what came back.</li>
+        <li>You are paying for clicks from people who were never going to buy.</li>
+        <li>Nobody has added a negative keyword since the account was opened.</li>
+        <li>Every advert lands on the homepage and the visitor has to go hunting.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">Google Ads is the fastest way to find out whether people want what you sell. It is also the fastest way to waste money, and the difference between the two is mostly maintenance.</p>
+        <p class="lede">We inherit accounts most months. The same five problems account for most of the waste, and all of them are fixable in the first week.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-google--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-google--subs">
+              <dl class="detail">
+          <dt>Google Ads</dt>
+          <dd>Search, Shopping and Performance Max run on your numbers.</dd>
+          <dt>YouTube Advertising</dt>
+          <dd>Video that reaches buyers before your competitors do.</dd>
+          <dt>Google Business &amp; Maps</dt>
+          <dd>Own the map pack in every neighbourhood you trade in.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1558655146-364adaf1fcc9.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>Conversion tracking first</h3>
+        <p>Forms, calls and WhatsApp tracked before we touch the budget, so there is a baseline to judge against.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1560472354-b33ff0c44a43.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Search term hygiene</h3>
+        <p>The report read every week and negatives added, which is the fastest saving available.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1526628953301-3e589a6a8b74.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Campaigns that can learn</h3>
+        <p>Consolidated structure with enough budget per campaign for the bidding to work.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1507238691740-187a5b1d37b8.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>Matching landing pages</h3>
+        <p>Each ad group pointed at the page about that thing, with the same words in the heading.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1586953208448-b95a79798f07.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Shopping and Performance Max</h3>
+        <p>Product feeds for shops and dealers, so stock advertises itself.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1543286386-713bdd548da4.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Cost per enquiry reporting</h3>
+        <p>The only number that decides whether any of this is working.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1551288049-bebda4e38f71.jpg" alt="Campaign performance being reviewed" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>What the first month looks like</h2>
+        <p>Week one is tracking and clean-up: conversions working, negatives added, location targeting corrected. That alone usually reduces waste noticeably before we have improved anything.</p>
+        <p>Weeks two to four we rebuild the structure and the landing pages, then let the bidding settle. You will see enquiries in week one, and a sensible cost per enquiry by the end of month two.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>Search, Shopping and Display</li>
+          <li>YouTube and Performance Max</li>
+          <li>Keyword and negative-keyword work</li>
+          <li>Call and form tracking</li>
+          <li>Google Business Profile and Maps</li>
+          <li>Strict budget pacing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1504868584819-f8e8b4b6d7e3.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1531482615713-2afd69097998.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Access and audit</h3>
+        <p>View access to the existing account, and twelve months of search terms read properly.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1558655146-364adaf1fcc9.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1553877522-43269d4ea984.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Track</h3>
+        <p>Forms, calls and WhatsApp wired as conversions, tested end to end.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1542744094-3a31f272c490.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1551434678-e076c223a692.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Rebuild</h3>
+        <p>Fewer campaigns, tighter ad groups, each pointed at its own page.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1556155092-490a1ba16284.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1543286386-713bdd548da4.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Run and report</h3>
+        <p>Weekly maintenance, monthly reporting on cost per enquiry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#sokoni-hardware">
+        <span class="n">+312%</span>
+        <b>Sokoni Hardware</b>
+        <span class="k">more enquiries</span>
+      </a>
+      <a href="portfolio.html#jengo-properties">
+        <span class="n">&minus;37%</span>
+        <b>Jengo Properties</b>
+        <span class="k">cost per site visit</span>
+      </a>
+      <a href="portfolio.html#rafiki-motors">
+        <span class="n">4.1x</span>
+        <b>Rafiki Motors</b>
+        <span class="k">return on ad spend</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#google-ads-mistakes">The Google Ads mistakes burning Nairobi budgets</a></li>
+          <li><a href="blog.html#is-your-marketing-working">How to tell if your marketing is actually working</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-google--s0">What is the minimum sensible budget?<span class="sign"></span></button>
+          <div class="acc-a" id="service-google--s0"><p>Less than the industry usually tells you, but it has to be enough for the bidding to learn. We would rather run one campaign properly on a modest budget than six on the same money. We will tell you if your budget is too thin for what you want.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-google--s1">Do you charge a percentage of ad spend?<span class="sign"></span></button>
+          <div class="acc-a" id="service-google--s1"><p>No. A percentage rewards us for spending more of your money, which is the wrong incentive. We quote per client based on the work involved.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-google--s2">How quickly will we see results?<span class="sign"></span></button>
+          <div class="acc-a" id="service-google--s2"><p>Enquiries usually start in the first week. A reliable cost per enquiry takes until about the end of month two, because the bidding needs conversion data before it can do its job.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-google--s3">What happens if we stop?<span class="sign"></span></button>
+          <div class="acc-a" id="service-google--s3"><p>The enquiries stop, which is the honest answer. Paid advertising is rent, not property. That is why we usually run it alongside SEO, which keeps working after you stop paying.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-seo" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1684835609103-57dc56e07433.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Search engine optimisation</p>
+    <h1>Search engine optimisation</h1>
+    <p class="lede">Rankings are the asset you keep. We fix the foundations, win the keywords that carry intent, and build the authority Google rewards.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Businesses competing on search</span></div>
+        <div><b>Live in</b><span>Month 2 onward</span></div>
+        <div><b>Rhythm</b><span>Meaningful by month 4-6</span></div>
+        <div><b>You get</b><span>Reported monthly</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>Competitors with worse products rank above you.</li>
+        <li>Your Services page lists ten things and ranks for none of them.</li>
+        <li>The site takes five seconds to show anything on a phone.</li>
+        <li>Nobody has ever asked for a link from an association you already belong to.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">Most Kenyan businesses that fail to rank are not beaten by better websites. They are beaten by sites that load faster, answer the question more directly, and have told Google plainly who they are and where they trade.</p>
+        <p class="lede">None of that needs a big budget. It needs six unglamorous things done in order, and then maintained.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-seo--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-seo--subs">
+              <dl class="detail">
+          <dt>Search Engine Optimisation</dt>
+          <dd>Climb the rankings that bring buyers, not browsers.</dd>
+          <dt>Local SEO &amp; Maps</dt>
+          <dd>Own the map pack in every neighbourhood you trade in.</dd>
+          <dt>Programmatic pages</dt>
+          <dd>Hundreds of location and product pages built from one template.</dd>
+          <dt>Entity and brand authority</dt>
+          <dd>The signals that tell Google who you are and what you sell.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1498050108023-c5249f4df085.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>Speed and technical fixes</h3>
+        <p>Images, scripts, hosting and caching, because nothing else gets measured until the page loads.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1486312338219-ce68d2c6f44d.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>One question per page</h3>
+        <p>Splitting catch-all pages into the things you actually sell, each able to rank for itself.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1512941937669-90a1b58e7e9c.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Google Business Profile</h3>
+        <p>Completed properly, which for local businesses is usually the single biggest win.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1556742049-0cfed4f6a45d.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>Reviews that keep coming</h3>
+        <p>A routine your staff can follow at handover, plus replies to every one.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1521791136064-7986c2920216.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Links you have already earned</h3>
+        <p>Associations, suppliers, sponsorships and press you are connected to but never asked.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1625296276703-3fbc924f07b5.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Enquiry reporting</h3>
+        <p>Rankings are the means. Enquiries are the point, and that is what we report.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1507925921958-8a62f3d1a50d.jpg" alt="Technical review of a website" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>Why it takes a few months</h2>
+        <p>Search rewards accumulated evidence, and evidence takes time to accumulate. The technical work lands immediately, the page work shows from about month two, and the link and review work compounds from month four.</p>
+        <p>We will tell you at the audit whether SEO is the right spend for you at all. For some businesses, paid advertising and a better Google profile will do more for less, and we would rather say so.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>Technical audit and fixes</li>
+          <li>Keyword research and mapping</li>
+          <li>On-page and schema markup</li>
+          <li>Local SEO and Maps</li>
+          <li>Programmatic pages at scale</li>
+          <li>Entity and brand authority</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1531482615713-2afd69097998.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1504868584819-f8e8b4b6d7e3.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Audit</h3>
+        <p>Speed, structure, profile and competitors, written up plainly.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1498050108023-c5249f4df085.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1542744094-3a31f272c490.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Fix the foundations</h3>
+        <p>Technical work and the Google Business Profile in the first few weeks.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1541462608143-67571c6738dd.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1486312338219-ce68d2c6f44d.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Build the pages</h3>
+        <p>One page per thing you sell, written for the buyer's question.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1521791136064-7986c2920216.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1543286386-713bdd548da4.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Earn and maintain</h3>
+        <p>Links, reviews and monthly reporting on enquiries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#sokoni-hardware">
+        <span class="n">+312%</span>
+        <b>Sokoni Hardware</b>
+        <span class="k">more enquiries</span>
+      </a>
+      <a href="portfolio.html#afya-bora-clinics">
+        <span class="n">1,400</span>
+        <b>Afya Bora Clinics</b>
+        <span class="k">appointments booked</span>
+      </a>
+      <a href="portfolio.html#baraka-academy">
+        <span class="n">310</span>
+        <b>Baraka Academy</b>
+        <span class="k">admission leads</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#rank-on-page-one-kenya">How Kenyan businesses can rank on page one in 2026</a></li>
+          <li><a href="blog.html#win-the-map-pack">Winning the map pack in your neighbourhood</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-seo--s0">How long before we see something?<span class="sign"></span></button>
+          <div class="acc-a" id="service-seo--s0"><p>Technical improvements show within weeks. Rankings move from about month two and become meaningful between months four and six. Anyone promising page one in thirty days is selling you something else.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-seo--s1">Can you guarantee a position?<span class="sign"></span></button>
+          <div class="acc-a" id="service-seo--s1"><p>No, and neither can anyone else. We can guarantee the work, report the movement honestly, and stop if it is not paying.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-seo--s2">Do we need to rebuild the website?<span class="sign"></span></button>
+          <div class="acc-a" id="service-seo--s2"><p>Often not. Most sites can be made faster and better structured without a rebuild. We will tell you if yours genuinely needs one, and why.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-seo--s3">Is local SEO different?<span class="sign"></span></button>
+          <div class="acc-a" id="service-seo--s3"><p>Yes, and for most businesses here it matters more. The map pack produces calls rather than clicks, and the Google Business Profile does more of the selling than the website does.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-ai" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1542744173-8e7e53415bb0.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>AI search optimisation</p>
+    <h1>AI search optimisation</h1>
+    <p class="lede">Buyers now ask ChatGPT, Gemini and Google AI Overviews before they ask a human. If those answers do not name you, you are invisible.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Anyone whose buyers ask assistants</span></div>
+        <div><b>Live in</b><span>First check in week 1</span></div>
+        <div><b>Rhythm</b><span>Tracked monthly</span></div>
+        <div><b>You get</b><span>15 buyer questions</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>You have no idea whether ChatGPT names you or a competitor.</li>
+        <li>Your business appears under four slightly different names online.</li>
+        <li>Every page says comprehensive solutions and none say what things cost.</li>
+        <li>Traffic from informational searches has been falling and nobody knows why.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">A growing share of buyers now ask an assistant before they ask a search engine. They read a paragraph and act on it, often without visiting a website at all. If you are not named in that paragraph, you were never in the running, and no ranking report will tell you.</p>
+        <p class="lede">This is a new discipline but not a mysterious one. Assistants favour businesses that are described consistently, answer specific questions in writing, and are corroborated somewhere other than their own site.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-ai--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-ai--subs">
+              <dl class="detail">
+          <dt>AI Search Optimisation</dt>
+          <dd>Be the brand ChatGPT, Gemini and AI Overviews name when buyers ask.</dd>
+          <dt>AI Overview tracking</dt>
+          <dd>A monthly record of how AI answers describe your business.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1677442136019-21780ecad995.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>Mention tracking</h3>
+        <p>Fifteen real buyer questions asked monthly across the major assistants, with who gets named recorded.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1553877522-43269d4ea984.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Entity consistency</h3>
+        <p>One exact name, address, phone number and description, matched everywhere you appear.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1515378791036-0648a3ef77b2.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Quotable pages</h3>
+        <p>Specifics an assistant can lift: timeframes, inclusions, what things cost, who it is not for.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1498050108023-c5249f4df085.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>Structured data</h3>
+        <p>Markup that states the facts plainly rather than leaving them implied.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1588681664899-f142ff2dc9b1.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Third-party corroboration</h3>
+        <p>A handful of credible mentions that describe you the same way.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1531545514256-b1400bc00f31.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Competitor teardown</h3>
+        <p>When a rival is named instead, we read the page the assistant drew on and tell you why.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1526628953301-3e589a6a8b74.jpg" alt="An assistant answering a buyer question" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>You can measure this directly</h2>
+        <p>That surprises people. You do not need a tool: you ask the assistants the questions your buyers ask, in the words they would use, and write down whether you appear and how you are described.</p>
+        <p>The useful part is reading the page that got cited instead of yours. It tells you exactly what a good answer looks like for that question, which is a far better brief than any keyword report.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>ChatGPT, Gemini, Perplexity</li>
+          <li>AI Overview tracking</li>
+          <li>Answer-ready content structure</li>
+          <li>Schema for products and services</li>
+          <li>Crawler access and llms.txt</li>
+          <li>Monthly AI visibility report</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1677442136019-21780ecad995.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1531545514256-b1400bc00f31.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Baseline</h3>
+        <p>Fifteen buyer questions run through the major assistants, recorded.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1517245386807-bb43f82c33c4.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1553877522-43269d4ea984.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Fix the entity</h3>
+        <p>One consistent description everywhere, including the places you forgot about.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1515378791036-0648a3ef77b2.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1486312338219-ce68d2c6f44d.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Write the answers</h3>
+        <p>A page per question, answered in the first two sentences with real specifics.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1558655146-364adaf1fcc9.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1543286386-713bdd548da4.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Re-measure</h3>
+        <p>The same fifteen questions every month, so you can see it move.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#sokoni-hardware">
+        <span class="n">+312%</span>
+        <b>Sokoni Hardware</b>
+        <span class="k">more enquiries</span>
+      </a>
+      <a href="portfolio.html#afya-bora-clinics">
+        <span class="n">1,400</span>
+        <b>Afya Bora Clinics</b>
+        <span class="k">appointments booked</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#get-named-by-chatgpt">Getting your business named by ChatGPT and AI Overviews</a></li>
+          <li><a href="blog.html#bottom-of-funnel-content">Why bottom-of-funnel content beats blogging for traffic</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-ai--s0">Is this not just SEO?<span class="sign"></span></button>
+          <div class="acc-a" id="service-ai--s0"><p>It overlaps and it is not the same. SEO aims at a position in a list. This aims at being quoted inside an answer, which rewards specificity and consistency more than it rewards links.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-ai--s1">Does it work for small businesses?<span class="sign"></span></button>
+          <div class="acc-a" id="service-ai--s1"><p>Often better, because the bar is low. Most of your competitors have inconsistent listings and vague pages, so being clear and specific puts you ahead quickly.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-ai--s2">How do you prove it is working?<span class="sign"></span></button>
+          <div class="acc-a" id="service-ai--s2"><p>The same fifteen questions, asked every month, with the answers recorded. You will see whether you are named, how you are described, and who else is in the answer.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-ai--s3">Will this still matter in two years?<span class="sign"></span></button>
+          <div class="acc-a" id="service-ai--s3"><p>The specific assistants will change. Being described consistently and answering real questions plainly has been good practice for twenty years and will not stop being so.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-content" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1455390582262-044cdead277a.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Content marketing</p>
+    <h1>Content marketing</h1>
+    <p class="lede">Articles, guides and video that pull in buyers month after month instead of renting attention from an ad platform.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Businesses with a sales target</span></div>
+        <div><b>Live in</b><span>First pages in 3 weeks</span></div>
+        <div><b>Rhythm</b><span>6-10 core pages</span></div>
+        <div><b>You get</b><span>Written in-house</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>You publish blog posts nobody reads and nothing sells.</li>
+        <li>Your site never says what anything costs.</li>
+        <li>The same six questions get asked on the phone every single week.</li>
+        <li>A competitor's page answers the question better than yours does.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">Most content advice encourages volume: publish weekly, build an audience, and eventually some of them will buy. For a business with a target this quarter, that is an expensive way to find out whether it works.</p>
+        <p class="lede">There is a faster route. Write the small number of pages people read immediately before buying, and write them better than anyone else in your market.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-content--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-content--subs">
+              <dl class="detail">
+          <dt>Content Marketing</dt>
+          <dd>Articles and guides that pull customers in month after month.</dd>
+          <dt>Copywriting</dt>
+          <dd>English, Kiswahili and Sheng, written to sell.</dd>
+          <dt>Email &amp; SMS</dt>
+          <dd>Campaigns that bring past customers back.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1507238691740-187a5b1d37b8.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>The pre-sale pages</h3>
+        <p>Cost, timeline, inclusions, comparisons, and who it is not for. Six to ten pages that do the selling.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1522202176988-66273c2fd55f.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Sourced from the phone</h3>
+        <p>Built from the questions your staff are actually asked, not from keyword tools.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1455390582262-044cdead277a.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Written in plain language</h3>
+        <p>English and Kiswahili where it helps, without the industry vocabulary.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1499951360447-b19be8fe80f5.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>Depth where it earns its place</h3>
+        <p>One thorough piece a month you would be happy to be judged on.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1674027001840-1a3e834eb73f.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Built to be quoted</h3>
+        <p>Specific enough for the press and for AI assistants to lift directly.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1633307057722-a4740ba0c5d0.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Refreshed, not abandoned</h3>
+        <p>Pages updated when the facts change, rather than left to rot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1499951360447-b19be8fe80f5.jpg" alt="Writing the pages that sell" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>The discomfort is the point</h2>
+        <p>These pages involve committing to specifics, naming competitors and admitting what you are not good at. That is why most businesses avoid them, and exactly why they work.</p>
+        <p>Your competitors feel the same discomfort. The first business in a market to answer these questions plainly tends to keep the advantage for years.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>Content calendar by funnel stage</li>
+          <li>Articles, guides, comparisons</li>
+          <li>Landing and service pages</li>
+          <li>English, Kiswahili and Sheng</li>
+          <li>Refreshing and interlinking</li>
+          <li>YouTube optimisation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1522202176988-66273c2fd55f.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1517245386807-bb43f82c33c4.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Listen</h3>
+        <p>Two weeks of recording every question asked before a sale.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1552664730-d307ca884978.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1557804506-669a67965ba0.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Group</h3>
+        <p>Six to ten distinct questions, in the customer's words.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1486312338219-ce68d2c6f44d.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1515378791036-0648a3ef77b2.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Write</h3>
+        <p>A page each, answering in the first two sentences.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1556155092-490a1ba16284.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1504868584819-f8e8b4b6d7e3.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Link and measure</h3>
+        <p>Into the navigation, not buried in a blog, and tracked to enquiries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#baraka-academy">
+        <span class="n">310</span>
+        <b>Baraka Academy</b>
+        <span class="k">admission leads</span>
+      </a>
+      <a href="portfolio.html#tumaini-sacco">
+        <span class="n">2,100</span>
+        <b>Tumaini Sacco</b>
+        <span class="k">new members</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#bottom-of-funnel-content">Why bottom-of-funnel content beats blogging for traffic</a></li>
+          <li><a href="blog.html#get-named-by-chatgpt">Getting your business named by ChatGPT and AI Overviews</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-content--s0">Do we have to publish our prices?<span class="sign"></span></button>
+          <div class="acc-a" id="service-content--s0"><p>You do not have to, and it is usually the single most effective thing you can do. If you quote per client, say what shapes the quote and give a range. Saying nothing is read as bad news.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-content--s1">Can our own staff write these?<span class="sign"></span></button>
+          <div class="acc-a" id="service-content--s1"><p>Often yes, and we prefer it where possible. They know the answers. We supply the structure, the questions and the editing, which is usually the part that is missing.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-content--s2">How is this different from blogging?<span class="sign"></span></button>
+          <div class="acc-a" id="service-content--s2"><p>A blog aims at people who are curious. These pages aim at people who are shopping. There are far fewer of the second group and they are worth many times more.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-content--s3">How long until it pays?<span class="sign"></span></button>
+          <div class="acc-a" id="service-content--s3"><p>The pre-sale pages often affect conversion within weeks, because they help people already on your site. The search benefit takes a few months.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-web" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1507238691740-187a5b1d37b8.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Websites and conversion</p>
+    <h1>Websites and conversion</h1>
+    <p class="lede">A site that loads fast on a Kenyan phone and is tuned every month to convert more of the traffic you already pay for.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Any business with a website</span></div>
+        <div><b>Live in</b><span>3-4 weeks to launch</span></div>
+        <div><b>Rhythm</b><span>Tested on mobile data</span></div>
+        <div><b>You get</b><span>You own everything</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>The site looks fine on your laptop and is painful on a phone.</li>
+        <li>The contact form emails an inbox nobody monitors.</li>
+        <li>You are not sure who owns the domain.</li>
+        <li>Visitors arrive from adverts and leave without doing anything.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">A business website has one job: turn the people who arrive into people who get in touch. Most sites here fail at that for reasons that have nothing to do with how they look.</p>
+        <p class="lede">We build sites that are fast on a Nairobi mobile connection, say what things cost, and record every enquiry properly, so you can tell which marketing is working.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-web--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-web--subs">
+              <dl class="detail">
+          <dt>Website Design</dt>
+          <dd>Fast, mobile-first sites built to convert.</dd>
+          <dt>E-commerce &amp; M-Pesa</dt>
+          <dd>Online shops with the checkout Kenyans actually use.</dd>
+          <dt>Conversion Optimisation</dt>
+          <dd>Turn more of the traffic you already pay for into enquiries.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1512941937669-90a1b58e7e9c.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>Fast on mobile data</h3>
+        <p>Tested on a mid-range Android phone on mobile data, not on office wifi.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1541462608143-67571c6738dd.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Built around enquiries</h3>
+        <p>Short forms, visible phone number, WhatsApp where it belongs.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1504868584819-f8e8b4b6d7e3.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Tracking that works</h3>
+        <p>Forms, calls and chats recorded and attributed to their source from day one.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1591696205602-2f950c417cb9.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>Conversion work</h3>
+        <p>The ongoing job of turning more of the traffic you already pay for into enquiries.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1586953208448-b95a79798f07.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Online shops</h3>
+        <p>M-Pesa first, delivery costs shown early, abandoned cart recovery.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1521791136064-7986c2920216.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>In your name</h3>
+        <p>Domain, hosting and every account registered to you, handed over in writing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1487338875411-8880f74114a2.jpg" alt="Testing a site on a phone on mobile data" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>Speed is a feature, not a setting</h2>
+        <p>A site at five seconds loses roughly a third of the enquiries a site at one second would get from identical traffic. If you are also paying for that traffic, you pay twice: once for the click and again for the enquiry that never happened.</p>
+        <p>We test the way your customer will experience it. That single habit catches more problems than any checklist.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>Business sites and online shops</li>
+          <li>M-Pesa, card, pay on delivery</li>
+          <li>Campaign landing pages</li>
+          <li>Conversion rate optimisation</li>
+          <li>Hosting, domains and e-mail</li>
+          <li>Staff training</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1432888498266-38ffec3eaf0a.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1533750349088-cd871a92f312.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Scope</h3>
+        <p>What the site has to achieve and which pages actually earn their place.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1498050108023-c5249f4df085.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1542744094-3a31f272c490.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Build</h3>
+        <p>Content first, then design, then the tracking, in that order.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1563986768609-322da13575f3.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1512941937669-90a1b58e7e9c.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Test</h3>
+        <p>On real phones on mobile data, before launch rather than after.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1522202176988-66273c2fd55f.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1556155092-490a1ba16284.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Hand over and improve</h3>
+        <p>Everything in your name, then ongoing conversion work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#mara-breeze-camp">
+        <span class="n">+68%</span>
+        <b>Mara Breeze Camp</b>
+        <span class="k">direct bookings</span>
+      </a>
+      <a href="portfolio.html#kilimo-fresh">
+        <span class="n">640</span>
+        <b>Kilimo Fresh</b>
+        <span class="k">orders a month</span>
+      </a>
+      <a href="portfolio.html#baraka-academy">
+        <span class="n">310</span>
+        <b>Baraka Academy</b>
+        <span class="k">admission leads</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#slow-website-costs">Your website is slow and it is costing you customers</a></li>
+          <li><a href="blog.html#selling-online-in-kenya">Selling online in Kenya: M-Pesa, delivery and trust</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-web--s0">How long does a website take?<span class="sign"></span></button>
+          <div class="acc-a" id="service-web--s0"><p>Three to four weeks for a standard business site, including photography and the Google Business Profile. Shops and booking systems take longer, and we will say how long at the quote.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-web--s1">Do we own the site when it is finished?<span class="sign"></span></button>
+          <div class="acc-a" id="service-web--s1"><p>Entirely. Domain, hosting, code and every account are registered in your name from the start. Leaving us costs you notice and nothing else.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-web--s2">Can you fix our existing site instead?<span class="sign"></span></button>
+          <div class="acc-a" id="service-web--s2"><p>Usually, and it is often the better value. We will tell you honestly whether yours is worth fixing or genuinely needs replacing.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-web--s3">What about maintenance?<span class="sign"></span></button>
+          <div class="acc-a" id="service-web--s3"><p>Updates, backups and security are included where we host. Content changes are either done by us or by you, whichever you prefer, and we will train your team either way.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-brand" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1558403194-611308249627.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Branding and creative</p>
+    <h1>Branding and creative</h1>
+    <p class="lede">Before you advertise, the message has to be right, and you need creative worth putting money behind.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>New and rebranding businesses</span></div>
+        <div><b>Live in</b><span>4-6 weeks</span></div>
+        <div><b>Rhythm</b><span>One-page guide</span></div>
+        <div><b>You get</b><span>Tested at 48px</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>Your logo becomes a grey smudge at profile-picture size.</li>
+        <li>The shopfront, the receipt and the Facebook page look like three businesses.</li>
+        <li>People cannot spell the name after hearing it once.</li>
+        <li>The signwriter guessed the colour and nobody noticed for a year.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">Most brand design is judged on a large screen in good light by people sitting still. Then it goes out and is seen at speed on the side of a vehicle, or at two centimetres across on a cracked phone screen in bright sun.</p>
+        <p class="lede">We design for those two conditions. It produces better work and costs nothing extra.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-brand--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-brand--subs">
+              <dl class="detail">
+          <dt>Branding &amp; Identity</dt>
+          <dd>Logo, colours and a brand guide that works on a matatu and a phone.</dd>
+          <dt>Photography &amp; Video</dt>
+          <dd>Product and location shoots, cut for every platform.</dd>
+          <dt>Packaging &amp; Print</dt>
+          <dd>Shelf-ready design and point-of-sale material.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1432888498266-38ffec3eaf0a.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>Logo that survives</h3>
+        <p>Tested at 48 pixels and at four metres before anyone approves it.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1561070791-2526d30994b5.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Two colours plus a neutral</h3>
+        <p>Strongly different in lightness, so they hold up outdoors and on cheap screens.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1552664730-d307ca884978.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Naming help</h3>
+        <p>Short, pronounceable, spellable after one hearing, and actually available.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1558655146-9f40138edfeb.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>A one-page guide</h3>
+        <p>The page your signwriter and your printer will genuinely use.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1574717024653-61fd2cf4d44d.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Photography and video</h3>
+        <p>Real images of your premises, stock and people, shot to be reused.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1602576666092-bf6447a729fc.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Applied consistently</h3>
+        <p>Signage, vehicles, receipts, social profiles and invoices, all matching.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1558655146-9f40138edfeb.jpg" alt="Brand identity applied to signage" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>Consistency beats sophistication</h2>
+        <p>The brands that feel established here are rarely the most sophisticated. They are the ones that look identical everywhere: same name, same colour, same typeface, on the shopfront and the invoice alike.</p>
+        <p>A simple identity applied consistently reads as a serious business. A sophisticated one applied unevenly reads as several small ones.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>Logo, colours, brand guide</li>
+          <li>Product photography</li>
+          <li>Short-form video and reels</li>
+          <li>Company profiles and decks</li>
+          <li>Packaging and print</li>
+          <li>Signage and vehicle branding</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1522202176988-66273c2fd55f.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1523240795612-9a054b0db644.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Understand</h3>
+        <p>What you sell, to whom, and where the brand will actually be seen.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1561070791-2526d30994b5.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1626785774625-ddcddc3445e9.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Design</h3>
+        <p>Concepts tested small and at distance before they are shown as pretty pictures.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1541462608143-67571c6738dd.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1432888498266-38ffec3eaf0a.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Document</h3>
+        <p>One page anyone can follow, not fifty nobody opens.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1586953208448-b95a79798f07.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1556740758-90de374c12ad.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Roll out</h3>
+        <p>Signage, vehicles, print and digital, applied in a sensible order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#tumaini-sacco">
+        <span class="n">2,100</span>
+        <b>Tumaini Sacco</b>
+        <span class="k">new members</span>
+      </a>
+      <a href="portfolio.html#kilimo-fresh">
+        <span class="n">640</span>
+        <b>Kilimo Fresh</b>
+        <span class="k">orders a month</span>
+      </a>
+      <a href="portfolio.html#pwani-foods">
+        <span class="n">1.9M</span>
+        <b>Pwani Foods</b>
+        <span class="k">video views</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#brand-on-a-matatu">Building a brand that works on a matatu and a phone</a></li>
+          <li><a href="blog.html#tiktok-for-kenyan-brands">What actually works on TikTok for Kenyan brands</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-brand--s0">Do we need a full rebrand?<span class="sign"></span></button>
+          <div class="acc-a" id="service-brand--s0"><p>Usually not. Most businesses need their existing identity tightened and documented rather than replaced. A rebrand throws away recognition you have already paid for, so we only recommend it when there is a real reason.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-brand--s1">How many concepts do we see?<span class="sign"></span></button>
+          <div class="acc-a" id="service-brand--s1"><p>Two or three, developed properly, rather than ten thumbnails. Each one comes with the reasoning and the small-size test, so you are choosing on evidence rather than taste alone.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-brand--s2">Do we get the source files?<span class="sign"></span></button>
+          <div class="acc-a" id="service-brand--s2"><p>Yes. Editable files, every format you will need, and the one-page guide. They are yours.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-brand--s3">Can you work with our existing logo?<span class="sign"></span></button>
+          <div class="acc-a" id="service-brand--s3"><p>Often that is the right answer. We can build a usable system around a logo that works, or tell you plainly which parts of it are letting you down.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-data" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1551288049-bebda4e38f71.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Data and reporting</p>
+    <h1>Data and reporting</h1>
+    <p class="lede">One dashboard, one plain report. Every enquiry traced back to the campaign that created it.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Anyone justifying a budget</span></div>
+        <div><b>Live in</b><span>Set up in 1-2 weeks</span></div>
+        <div><b>Rhythm</b><span>One screen</span></div>
+        <div><b>You get</b><span>One page a month</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>Your report opens with reach and mentions enquiries on page six.</li>
+        <li>Nobody can say which advert produced last month's best customer.</li>
+        <li>The form sends an email and nothing is recorded anywhere.</li>
+        <li>WhatsApp brings most of your enquiries and gets none of the credit.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">You need four numbers: enquiries, cost per enquiry, source, and closed business. Everything else is context for those four.</p>
+        <p class="lede">If you can produce them every month you can run a marketing budget sensibly. If you cannot, you are guessing confidently.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-data--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-data--subs">
+              <dl class="detail">
+          <dt>Conversion Tracking</dt>
+          <dd>Every call, form and WhatsApp traced to its campaign.</dd>
+          <dt>Live Dashboards</dt>
+          <dd>One screen showing what your marketing is doing today.</dd>
+          <dt>Lead Attribution</dt>
+          <dd>Know which shilling produced which customer.</dd>
+          <dt>Market Research</dt>
+          <dd>What your buyers search for, and what your rivals miss.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1504868584819-f8e8b4b6d7e3.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>Conversion tracking</h3>
+        <p>Forms, calls and WhatsApp wired properly and tested end to end.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1522202176988-66273c2fd55f.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Call tracking</h3>
+        <p>So calls are attributed to the campaign that caused them rather than assumed.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1563986768609-322da13575f3.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>WhatsApp attribution</h3>
+        <p>Tagged links, so your biggest channel stops being your least measured.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1686061594225-3e92c0cd51b0.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>One-screen dashboard</h3>
+        <p>The four numbers, this month against last, readable at a glance.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1543286386-713bdd548da4.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Monthly one-pager</h3>
+        <p>What happened, what we did, what we learned, what is next.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1553877522-43269d4ea984.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Closed-loop reporting</h3>
+        <p>Enquiries matched to what actually became business, even from a spreadsheet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1686061594225-3e92c0cd51b0.jpg" alt="A one-screen marketing dashboard" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>If the report needs explaining, it is homework</h2>
+        <p>A dashboard that takes effort to read does not get read. Ours fits on one screen and anyone in the business can glance at it and know whether the month is going well.</p>
+        <p>The monthly page is three minutes of reading and gives a director enough to ask a good question. Anything longer gets filed unread, which is the same as no report at all.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>Analytics and conversion setup</li>
+          <li>Call tracking</li>
+          <li>Lead attribution</li>
+          <li>Live dashboard</li>
+          <li>Monthly and quarterly reports</li>
+          <li>Funnel analysis</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1573164713988-8665fc963095.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1498050108023-c5249f4df085.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Plumbing</h3>
+        <p>Tracking installed and tested before anything is reported.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1504868584819-f8e8b4b6d7e3.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1553877522-43269d4ea984.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Baseline</h3>
+        <p>A month of honest figures, however uncomfortable.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1558655146-364adaf1fcc9.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1556155092-490a1ba16284.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Dashboard</h3>
+        <p>One screen, connected to the sources that matter.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1543286386-713bdd548da4.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1556761175-5973dc0f32e7.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Monthly rhythm</h3>
+        <p>One page, four sections, every month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#sokoni-hardware">
+        <span class="n">+312%</span>
+        <b>Sokoni Hardware</b>
+        <span class="k">more enquiries</span>
+      </a>
+      <a href="portfolio.html#jengo-properties">
+        <span class="n">&minus;37%</span>
+        <b>Jengo Properties</b>
+        <span class="k">cost per site visit</span>
+      </a>
+      <a href="portfolio.html#rafiki-motors">
+        <span class="n">4.1x</span>
+        <b>Rafiki Motors</b>
+        <span class="k">return on ad spend</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#is-your-marketing-working">How to tell if your marketing is actually working</a></li>
+          <li><a href="blog.html#google-ads-mistakes">The Google Ads mistakes burning Nairobi budgets</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-data--s0">What tools do you use?<span class="sign"></span></button>
+          <div class="acc-a" id="service-data--s0"><p>Usually Looker Studio, Google Analytics and a Google Sheet, because they are free and they are enough for most businesses. We are not attached to any of it. The point is the four numbers, not the software.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-data--s1">Can you track phone calls?<span class="sign"></span></button>
+          <div class="acc-a" id="service-data--s1"><p>Yes, with a tracked number or call tracking on the website, including a minimum duration so misdials do not count as enquiries.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-data--s2">We use WhatsApp for everything. Can that be measured?<span class="sign"></span></button>
+          <div class="acc-a" id="service-data--s2"><p>Yes, by tagging the links so each conversation carries its source. It takes about an hour to set up and it changes what every report afterwards is worth.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-data--s3">What if the numbers are bad?<span class="sign"></span></button>
+          <div class="acc-a" id="service-data--s3"><p>Then you have found that out cheaply, which is the whole point. We would rather show you an uncomfortable baseline in month one than a flattering graph in month six.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-pr" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1504384308090-c894fdcc538d.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Digital PR and link building</p>
+    <h1>Digital PR and link building</h1>
+    <p class="lede">Google and AI engines both trust businesses other credible sites talk about. We earn those mentions honestly.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Businesses with something to say</span></div>
+        <div><b>Live in</b><span>First pitches in 2 weeks</span></div>
+        <div><b>Rhythm</b><span>Data-led angles</span></div>
+        <div><b>You get</b><span>No retainer required</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>You sent a press release about your anniversary and heard nothing.</li>
+        <li>Competitors get quoted in the papers and you do not.</li>
+        <li>You have interesting data and no idea it is interesting.</li>
+        <li>Every link you have ever had points at your own website.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">Coverage does not require an agency on retainer and a friendly editor. It requires something genuinely worth reporting and making it effortless to report.</p>
+        <p class="lede">The most available route for most businesses is their own data. You sit on information about your market that no journalist can get elsewhere.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-pr--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-pr--subs">
+              <dl class="detail">
+          <dt>Digital PR</dt>
+          <dd>Earn the Kenyan press mentions that build real authority.</dd>
+          <dt>Review strategy</dt>
+          <dd>More reviews, answered properly, on the profiles that matter.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1495020689067-958852a7765e.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>Finding the angle</h3>
+        <p>What you already know that a reader would find genuinely interesting.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1551288049-bebda4e38f71.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Turning data into a story</h3>
+        <p>Honest, clearly sourced, with the sample size visible.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1521791136064-7986c2920216.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Targeted pitching</h3>
+        <p>To named journalists who cover your subject, not to a list.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1556761175-5973dc0f32e7.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>Being the expert</h3>
+        <p>Available and useful when a story is already running.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1588681664899-f142ff2dc9b1.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Links that count</h3>
+        <p>Associations, suppliers, sponsorships and press you are already connected to.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1677442136019-21780ecad995.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Corroboration for AI</h3>
+        <p>Credible third-party mentions, which assistants weigh far above self-description.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1606857521015-7f9fcf423740.jpg" alt="A newsroom deciding what to run" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>Three paragraphs, no attachments</h2>
+        <p>What you found, why it matters now, and what you can provide. A named person available today is worth more than a glossy pack.</p>
+        <p>One follow-up after three days is reasonable. A second is not, and it costs you the relationship for the next story.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>Kenyan press placement</li>
+          <li>Directories and citations</li>
+          <li>Partner and supplier mentions</li>
+          <li>Founder thought leadership</li>
+          <li>Review strategy</li>
+          <li>Toxic backlink clean-up</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1495020689067-958852a7765e.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1588681664899-f142ff2dc9b1.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Find it</h3>
+        <p>What data or expertise you have that is genuinely worth reporting.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1515378791036-0648a3ef77b2.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1533750349088-cd871a92f312.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Shape it</h3>
+        <p>Into something a reader cares about, with the sourcing stated.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1521791136064-7986c2920216.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1556761175-5973dc0f32e7.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Pitch it</h3>
+        <p>To journalists we have read, with a person available to speak.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1588681664899-f142ff2dc9b1.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1563986768609-322da13575f3.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Reuse it</h3>
+        <p>The coverage works twice, as readership and as corroboration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#pwani-foods">
+        <span class="n">1.9M</span>
+        <b>Pwani Foods</b>
+        <span class="k">video views</span>
+      </a>
+      <a href="portfolio.html#tumaini-sacco">
+        <span class="n">2,100</span>
+        <b>Tumaini Sacco</b>
+        <span class="k">new members</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#kenyan-press-coverage">Getting covered by the Kenyan press without a PR budget</a></li>
+          <li><a href="blog.html#get-named-by-chatgpt">Getting your business named by ChatGPT and AI Overviews</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-pr--s0">Can you guarantee coverage?<span class="sign"></span></button>
+          <div class="acc-a" id="service-pr--s0"><p>No, and anyone who does is either paying for it or misleading you. We can guarantee that the angle is real, the pitch is good and it reaches the right people.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-pr--s1">Is this the same as buying advertorial?<span class="sign"></span></button>
+          <div class="acc-a" id="service-pr--s1"><p>No. Advertorial is advertising that looks like news, and readers increasingly spot it. Earned coverage carries the credibility that paid placement does not, which is also why search engines and assistants weigh it differently.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-pr--s2">We are a small business. Why would anyone cover us?<span class="sign"></span></button>
+          <div class="acc-a" id="service-pr--s2"><p>Because you know things about your market that nobody else can tell a reporter. Size is much less relevant than having something specific and checkable to say.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-pr--s3">How long does it take?<span class="sign"></span></button>
+          <div class="acc-a" id="service-pr--s3"><p>The first pitches go out in about two weeks. Coverage is unpredictable by nature: sometimes within days, sometimes not at all for that angle. We work on several.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="entry" id="service-offline" data-back="All services">
+<div class="wrap entry-back"><a href="#all">&larr; All services</a></div>
+<section class="svc-hero">
+  <img class="svc-hero-bg" alt="" src="assets/img/1567443024551-f3e3cc2be870.jpg" width="1600" height="896" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>&rsaquo;</span><a href="#all">Services</a><span>&rsaquo;</span>Print, radio and activations</p>
+    <h1>Print, radio and activations</h1>
+    <p class="lede">Not every customer is online all day. We buy the offline media that still moves product here, and make every channel trackable.</p>
+    <div class="btn-row">
+      <a class="btn btn-xl" href="about.html#contact">Get a free audit</a>
+      <a class="btn btn-line btn-xl" href="portfolio.html">See client results</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm">
+  <div class="wrap">
+    <div class="svc-facts">
+        <div><b>Best for</b><span>Businesses selling off the shelf</span></div>
+        <div><b>Live in</b><span>Planned 4 weeks ahead</span></div>
+        <div><b>Rhythm</b><span>Tracked with codes</span></div>
+        <div><b>You get</b><span>Filmed for reuse</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>You are probably here because of one of these</h2>
+        <ul class="pain" style="margin-top:26px">
+        <li>You sponsored something and have no idea whether it worked.</li>
+        <li>The radio spot ran and nothing was measured.</li>
+        <li>Your vehicle livery is unreadable from more than three metres.</li>
+        <li>The activation happened and nobody filmed any of it.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lede">Offline media still moves product here, particularly outside the main cities and particularly for products people buy off a shelf. The problem is almost never the channel. It is that nobody measures it.</p>
+        <p class="lede">We plan offline the way we plan everything else: with a way to tell afterwards whether it worked.</p>
+        <div class="acc acc-tight" style="margin-top:26px">
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false" aria-controls="service-offline--subs">What sits under this service<span class="sign"></span></button>
+            <div class="acc-a" id="service-offline--subs">
+              <dl class="detail">
+          <dt>Radio, Print &amp; Outdoor</dt>
+          <dd>The offline media that still moves product here.</dd>
+          <dt>Market activations and roadshows</dt>
+          <dd>Sampling and demos where your customers already gather.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>What is included</h2></div>
+    <div class="inc">
+      <div>
+        <figure class="inc-img"><img src="assets/img/1478737270239-2f02b77fc618.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">01</span>
+        <h3>Radio and print</h3>
+        <p>Buying, scheduling and scripts, in the languages your buyers actually listen in.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1558655146-9f40138edfeb.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">02</span>
+        <h3>Outdoor and livery</h3>
+        <p>Designed to be legible at speed and at distance, which most are not.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1556740738-b6a63e27c4df.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">03</span>
+        <h3>Activations and sampling</h3>
+        <p>Where your customers already gather, with a reason to hand over a number.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1556761175-5973dc0f32e7.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">04</span>
+        <h3>Exhibition stands</h3>
+        <p>Built to start conversations rather than to look impressive empty.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1543286386-713bdd548da4.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">05</span>
+        <h3>Tracking offline</h3>
+        <p>Unique codes, numbers and landing pages, so the spend can be judged.</p>
+      </div>
+      <div>
+        <figure class="inc-img"><img src="assets/img/1574717024653-61fd2cf4d44d.jpg" alt="" loading="lazy" width="1400" height="933"></figure>
+        <span class="n">06</span>
+        <h3>Filmed and reused</h3>
+        <p>Every activation produces a month of social content for free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc-band">
+      <div><img src="assets/img/1556742049-0cfed4f6a45d.jpg" alt="Market activation and sampling" loading="lazy" width="1000" height="750"></div>
+      <div>
+        <h2>Everything gets a way to be measured</h2>
+        <p>A dedicated phone number on the billboard. A code read out on the radio. A short landing page for the activation. None of it is complicated and almost nobody does it.</p>
+        <p>That one habit turns offline from an act of faith into a line you can defend at budget time.</p>
+        <ul class="tri-list" style="margin-top:22px;columns:2;column-gap:26px">
+          <li>Radio, national and vernacular</li>
+          <li>Billboards and vehicle branding</li>
+          <li>Market activations and roadshows</li>
+          <li>Exhibition stands and launches</li>
+          <li>Flyers and point of sale</li>
+          <li>Unique tracking numbers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="head rv"><h2>Four steps, start to finish</h2></div>
+    <div class="steps">
+      <div class="stepb rv">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1533750349088-cd871a92f312.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1557804506-669a67965ba0.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">1</span>
+        <h3>Plan</h3>
+        <p>Which channel, which audience, and how we will know whether it worked.</p>
+      </div>
+      <div class="stepb rv d1">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1478737270239-2f02b77fc618.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1574717024653-61fd2cf4d44d.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">2</span>
+        <h3>Produce</h3>
+        <p>Scripts, artwork and stands, designed for the real viewing conditions.</p>
+      </div>
+      <div class="stepb rv d2">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1556740758-90de374c12ad.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1590602847861-f357a9332bbc.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">3</span>
+        <h3>Run</h3>
+        <p>Scheduled, staffed and filmed.</p>
+      </div>
+      <div class="stepb rv d3">
+        <figure class="slides" data-auto>
+          <img src="assets/img/1543286386-713bdd548da4.jpg" alt="" class="on" loading="lazy" width="1400" height="933">
+          <img src="assets/img/1504868584819-f8e8b4b6d7e3.jpg" alt="" loading="lazy" width="1400" height="933">
+        </figure>
+        <span class="n">4</span>
+        <h3>Account for it</h3>
+        <p>Codes and numbers reconciled against enquiries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv"><h2>What this has done for other businesses</h2></div>
+    <div class="proof">
+      <a href="portfolio.html#tumaini-sacco">
+        <span class="n">2,100</span>
+        <b>Tumaini Sacco</b>
+        <span class="k">new members</span>
+      </a>
+      <a href="portfolio.html#pwani-foods">
+        <span class="n">1.9M</span>
+        <b>Pwani Foods</b>
+        <span class="k">video views</span>
+      </a>
+    </div>
+
+    <div class="art-cta" style="margin-top:40px;max-width:none">
+      <div>
+        <b>Want to read more on this?</b>
+        <ul style="margin:10px 0 0;padding:0;list-style:none;font-size:.95rem">
+          <li><a href="blog.html#brand-on-a-matatu">Building a brand that works on a matatu and a phone</a></li>
+          <li><a href="blog.html#is-your-marketing-working">How to tell if your marketing is actually working</a></li>
+        </ul>
+      </div>
+      <a class="btn" href="about.html#contact">Get a free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="head rv"><h2>What people ask before starting</h2></div>
+    <div class="acc rv">
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-offline--s0">Does radio still work in Kenya?<span class="sign"></span></button>
+          <div class="acc-a" id="service-offline--s0"><p>For the right product and the right audience, yes, and often better than the same money spent online. It is strongest outside the main cities and for products bought off a shelf.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-offline--s1">How do you measure a billboard?<span class="sign"></span></button>
+          <div class="acc-a" id="service-offline--s1"><p>A dedicated phone number, a short memorable URL, or a code. It is not perfect attribution, but it is the difference between a number and a guess.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-offline--s2">Can you handle the printing and production?<span class="sign"></span></button>
+          <div class="acc-a" id="service-offline--s2"><p>Yes, including signage, vehicle livery, stands and print. We manage the suppliers and you own the artwork files.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q" aria-expanded="false" aria-controls="service-offline--s3">Should we be doing offline at all?<span class="sign"></span></button>
+          <div class="acc-a" id="service-offline--s3"><p>Sometimes the honest answer is no. If your buyers are reachable more cheaply online, we will say so rather than sell you a radio schedule.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="sec cta">
+  <div class="wrap">
     <h2 class="rv">Not sure which of the ten you need?</h2>
     <p class="rv" style="margin-bottom:32px">Most clients start with a free audit. We look at what you already have and recommend one or two, never all ten.</p>
     <div class="btn-row rv">
-      <a class="btn btn-white btn-xl" href="contact.html">Get my free audit</a>
-      <a class="btn btn-white btn-xl" style="background:transparent;color:#fff" href="tel:+254719547736">Call +254 719 547 736</a>
+      <a class="btn btn-white btn-xl" href="about.html#contact">Get my free audit</a>
+      <a class="btn btn-line btn-xl" href="tel:+254719547736">Call +254 719 547 736</a>
     </div>
   </div>
 </section>
@@ -630,20 +2860,20 @@
         <div>
           <h4>Industries</h4>
           <ul>
-            <li><a href="contact.html">Retail &amp; hardware</a></li>
-            <li><a href="contact.html">Hospitality &amp; tourism</a></li>
-            <li><a href="contact.html">Health &amp; clinics</a></li>
-            <li><a href="contact.html">Schools &amp; saccos</a></li>
-            <li><a href="contact.html">Agribusiness &amp; manufacturing</a></li>
-            <li><a href="contact.html">Property &amp; automotive</a></li>
+            <li><a href="about.html#contact">Retail &amp; hardware</a></li>
+            <li><a href="about.html#contact">Hospitality &amp; tourism</a></li>
+            <li><a href="about.html#contact">Health &amp; clinics</a></li>
+            <li><a href="about.html#contact">Schools &amp; saccos</a></li>
+            <li><a href="about.html#contact">Agribusiness &amp; manufacturing</a></li>
+            <li><a href="about.html#contact">Property &amp; automotive</a></li>
           </ul>
         </div>
 
         <div>
           <h4>Insights</h4>
           <ul>
-            <li><a href="stats.html">Marketing numbers</a></li>
-            <li><a href="guides.html">Guides &amp; playbooks</a></li>
+            <li><a href="blog.html#numbers">Marketing numbers</a></li>
+            <li><a href="blog.html#guides">Guides &amp; playbooks</a></li>
             <li><a href="blog.html#cat=seo">SEO guides</a></li>
             <li><a href="blog.html#cat=social">Social media</a></li>
             <li><a href="blog.html#cat=google">Paid ads</a></li>
@@ -658,18 +2888,18 @@
             <li><a href="about.html">About Jua Media</a></li>
             <li><a href="about.html#team">Our team</a></li>
             <li><a href="portfolio.html">Client results</a></li>
-            <li><a href="pricing.html">How we price</a></li>
-            <li><a href="contact.html">Careers</a></li>
+            <li><a href="services.html#pricing">How we price</a></li>
+            <li><a href="about.html#contact">Careers</a></li>
           </ul>
         </div>
 
         <div>
           <h4>Where we work</h4>
           <ul>
-            <li><a href="contact.html">Nairobi</a></li>
-            <li><a href="contact.html">Mombasa &amp; Kisumu</a></li>
-            <li><a href="contact.html">Nakuru &amp; Eldoret</a></li>
-            <li><a href="contact.html">Kampala &amp; Dar es Salaam</a></li>
+            <li><a href="about.html#contact">Nairobi</a></li>
+            <li><a href="about.html#contact">Mombasa &amp; Kisumu</a></li>
+            <li><a href="about.html#contact">Nakuru &amp; Eldoret</a></li>
+            <li><a href="about.html#contact">Kampala &amp; Dar es Salaam</a></li>
           </ul>
         </div>
 
@@ -715,7 +2945,7 @@
         <a href="#">Privacy policy</a>
         <a href="#">Terms of service</a>
         <a href="#">Cookie settings</a>
-        <a href="contact.html">Sitemap</a>
+        <a href="about.html#contact">Sitemap</a>
       </div>
     </div>
   </div>
